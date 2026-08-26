@@ -211,6 +211,17 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
 .def{text-align:center}
 .def .short,.pullline{border-left:none;border-top:3px solid var(--green);padding:16px 0 0}
 .pillar{text-align:center}
+/* лицо ASA — карточки систем */
+.sysintro{max-width:820px;margin:0 auto}
+.sysgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:38px;text-align:left}
+@media(max-width:900px){.sysgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.sysgrid{grid-template-columns:1fr}}
+.syscard{display:flex;flex-direction:column;background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;transition:box-shadow .25s,border-color .25s}
+.syscard:hover{box-shadow:0 18px 40px -26px rgba(44,51,65,.3);border-color:var(--green)}
+.syscard .sk{font-family:'Oswald',sans-serif;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green-ink);margin-bottom:10px}
+.syscard h3{font-size:20px;margin-bottom:8px;color:var(--ink)}
+.syscard p{font-size:14.5px;color:var(--muted);line-height:1.5;flex:1}
+.syscard .go{margin-top:16px;font-weight:700;font-size:14px;color:var(--green-ink);display:inline-flex;gap:6px}
 </style>
 </head>
 <body>
@@ -247,6 +258,26 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ЛИЦО ASA · что это + системы -->
+<section class="sec" id="systems">
+  <div class="wrap">
+    <div class="sysintro rv">
+      <span class="kick">Architect Systems AI</span>
+      <h2 style="margin-top:16px;font-size:clamp(28px,3.6vw,44px)">Единая система управления<br>искусственным интеллектом</h2>
+      <p class="lead" style="margin:16px auto 0">Я собираю инструменты, приложения и команды AI-агентов, которые превращают нейросеть в управляемый инструмент под конкретную задачу. Фундамент всего — PROMPT MASTER: без точного запроса нейросеть бесполезна.</p>
+    </div>
+    <div class="sysgrid rv">
+      <a class="syscard" href="projects.html"><div class="sk">Фундамент</div><h3>PROMPT MASTER</h3><p>Метод управления AI. Изучаешь один раз — управляешь любой моделью на уровне инженера, а не пользователя.</p><span class="go">Смотреть →</span></a>
+      <a class="syscard" href="projects.html"><div class="sk">Инструмент</div><h3>PROMPT MASTER APP</h3><p>Описываешь задачу словами — получаешь точный промпт под свою нишу за минуты. На базе Claude.</p><span class="go">Смотреть →</span></a>
+      <a class="syscard" href="projects.html"><div class="sk">Контроль</div><h3>AI-Аудит</h3><p>Проверка договоров, сайтов, текстов и промптов: риск → чем опасно → как исправить, с основанием.</p><span class="go">Смотреть →</span></a>
+      <a class="syscard" href="projects.html"><div class="sk">Безопасность</div><h3>Защита от утечек кода</h3><p>Робот-контролёр ловит забытый ключ, пароль или дыру ещё до публикации кода.</p><span class="go">Смотреть →</span></a>
+      <a class="syscard" href="projects.html"><div class="sk">Маркетинг</div><h3>Контент-воронка</h3><p>Воронка продаж и контент на неделю вперёд под твою нишу — всё ведёт клиента в одну точку.</p><span class="go">Смотреть →</span></a>
+      <a class="syscard" href="projects.html"><div class="sk">Масштаб</div><h3>Карта AI-агентов</h3><p>Команда из связанных AI-агентов под твой бизнес: карта департаментов и промпт на каждого.</p><span class="go">Смотреть →</span></a>
+    </div>
+    <div style="margin-top:34px"><a href="projects.html" class="btn btn-dark">Все системы</a></div>
   </div>
 </section>
 
