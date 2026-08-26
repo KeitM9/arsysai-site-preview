@@ -222,6 +222,18 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
 .syscard h3{font-size:20px;margin-bottom:8px;color:var(--ink)}
 .syscard p{font-size:14.5px;color:var(--muted);line-height:1.5;flex:1}
 .syscard .go{margin-top:16px;font-weight:700;font-size:14px;color:var(--green-ink);display:inline-flex;gap:6px}
+/* ссылки-слова под хедером — без полосы, зелёные при наведении */
+.subbar{background:transparent;padding:20px 0 0}
+.subbar .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 34px;font-family:var(--disp);font-size:15px;font-weight:600}
+.subbar a{color:var(--ink);transition:color .2s}
+.subbar a:hover,.subbar a:active,.subbar a:focus{color:var(--green)}
+/* текст новости — короткие строки, ссылки в словах */
+.newstext{max-width:640px;margin:18px auto 0}
+.newstext p{color:#cfd5de;font-size:16px;line-height:1.5;margin-bottom:8px}
+.newstext p.mt{margin-top:18px}
+.newstext a{color:var(--green);border-bottom:1px solid rgba(180,250,178,.4);transition:border-color .2s}
+.newstext a:hover{border-color:var(--green)}
+.newstext strong{color:#fff}
 </style>
 </head>
 <body>
@@ -255,19 +267,20 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
       </div>
     </div>
   </div>
-  <div class="hero-foot">
-    <div class="wrap" style="justify-content:center">
-      <a href="projects.html">Проекты</a>
-      <a href="projects.html">Решения</a>
-      <a href="#create">AI агенты</a>
-      <a href="#create">Приложения</a>
-      <a href="#create">Автоматизация</a>
-    </div>
-  </div>
 </section>
 
+<div class="subbar">
+  <div class="wrap">
+    <a href="projects.html">Проекты</a>
+    <a href="projects.html">Решения</a>
+    <a href="#create">AI агенты</a>
+    <a href="#create">Приложения</a>
+    <a href="#create">Автоматизация</a>
+  </div>
+</div>
+
 <!-- 1 · ЧТО ПРОИСХОДИТ -->
-<section class="sec" id="now">
+<section class="sec" id="now" style="padding-top:24px">
   <div class="wrap asym rv">
     <div>
       <h2>Пользоваться нейросетью научились почти все.<br>Управлять — пока <span class="gk">немногие</span>.</h2>
@@ -289,40 +302,16 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
 
     <article class="newsitem rv">
       <div class="newshead">
-        <span class="newstag">Новость</span>
+        <span class="newstag">Главная новость</span>
         <span class="newsdate">Август 2026</span>
       </div>
-      <h3 class="newstitle">Рынок AI разошёлся на две дороги. В один и тот же месяц.</h3>
-      <p class="body" style="color:#cfd5de;font-size:18px;max-width:72ch;margin-top:0">AI делит людей на две группы. И расходятся они прямо сейчас.</p>
-
-      <div class="roads">
-        <div class="road road-down">
-          <div class="rlabel"><span class="ar">↓</span> Дорога вниз</div>
-          <h3>Кого сокращают</h3>
-          <p>Тех, кто работает с AI на уровне поисковика — задал вопрос, взял первый ответ — компании сокращают первыми. Только за август рынок потерял 86 тысяч таких сотрудников. Тяжелее всего новичкам: базовые задачи уже закрывает AI, и брать их стали реже.</p>
-          <div class="big">−80%</div>
-          <p class="cap">На столько упал найм новичков в компаниях, которые внедрили AI. Диплом сам по себе перестал быть страховкой — на входе смотрят, умеешь ли ты работать с AI на результат.</p>
-          <div class="fact">Источник: Гарвард</div>
-        </div>
-        <div class="road road-up">
-          <div class="rlabel"><span class="ar">↑</span> Дорога вверх</div>
-          <h3>Кого ищут</h3>
-          <p>Тех, кто умеет управлять AI, рынок разбирает. Компании даже отменяют часть увольнений и снова открывают вакансии: автоматизация держится на человеке, который управляет системой и держит её под контролем.</p>
-          <div class="big">+62%</div>
-          <p class="cap">На столько выше платят за ту же работу тем, кто управляет AI. Вакансий под этот навык уже в восемь раз больше, чем в среднем по рынку.</p>
-          <div class="fact">Источник: PwC</div>
-        </div>
-      </div>
-
-      <div style="max-width:840px;margin-top:36px">
-        <p class="body" style="color:#eef1f4;font-size:18px;max-width:72ch">В августе ChatGPT перешагнул отметку в 1 миллиард человек в неделю. Пользоваться AI научились почти все — и «просто пользоваться» стало базой, как умение читать. Ценность ушла на уровень выше: результат берёт тот, кто управляет — ставит роль, даёт контекст, держит память и проверяет ответ.</p>
-        <p class="body" style="color:#c7cdd6;margin-top:14px;max-width:72ch">Разрыв между двумя дорогами решает теперь одно: кто управляет нейросетью. Кто освоит управление в 2026-м, в 2027-м окажется на верхней дороге.</p>
-        <div class="sources">
-          <span>Источники:</span>
-          <a href="https://www.forbes.com/sites/carolinecastrillon/2026/05/29/why-entry-level-hiring-is-down-80-at-companies-adopting-ai/" target="_blank" rel="noopener">Гарвард · найм −80%</a>
-          <a href="https://www.pwc.com/gx/en/news-room/press-releases/2026/pwc-2026-ai-jobs-barometer.html" target="_blank" rel="noopener">PwC · +62%, ×8</a>
-          <a href="https://www.aiapps.com/blog/ai-news-august-breakthroughs-launches-trends-cant-miss/" target="_blank" rel="noopener">ChatGPT · 1 млрд/неделю</a>
-        </div>
+      <h3 class="newstitle">Компании всё чаще заменяют людей на AI</h3>
+      <div class="newstext">
+        <p>В 2026 году больше половины крупных <a href="https://founderreports.com/ai-layoffs-tracker/" target="_blank" rel="noopener">сокращений</a> компании объясняют внедрением искусственного интеллекта.</p>
+        <p><a href="https://tech.co/news/companies-replace-workers-with-ai" target="_blank" rel="noopener">Salesforce</a> сократила поддержку с 9 000 до 5 000 человек — работу закрыли AI-агенты.</p>
+        <p><a href="https://displaceindex.com/trends/ai-layoffs-tracker/" target="_blank" rel="noopener">Citigroup</a> убирает около 20 000 позиций к концу года и тоже связывает это с AI.</p>
+        <p class="mt">Автоматизация растёт каждый месяц.</p>
+        <p>Спокойнее там, где человек не соревнуется с AI, а <strong>управляет</strong> им.</p>
       </div>
     </article>
 
