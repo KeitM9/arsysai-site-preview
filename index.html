@@ -63,20 +63,20 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
 
 .hero{position:relative;min-height:90vh;min-height:90dvh;display:flex;flex-direction:column;overflow:hidden;background:var(--dark-1)}
 #net{position:absolute;inset:0;width:100%;height:100%}
-.hero-veil{position:absolute;inset:0;background:linear-gradient(90deg,rgba(37,43,55,.95) 0%,rgba(37,43,55,.62) 46%,rgba(37,43,55,.12) 100%),radial-gradient(120% 90% at 82% 16%,rgba(180,250,178,.12),transparent 55%),linear-gradient(180deg,rgba(37,43,55,.2),rgba(37,43,55,.55))}
-.hero-in{position:relative;z-index:2;width:100%;flex:1;display:flex;align-items:center;padding-top:84px}
-.hero-left{max-width:58%}
+.hero-veil{position:absolute;inset:0;background:radial-gradient(110% 80% at 50% 14%,rgba(180,250,178,.14),transparent 58%),linear-gradient(180deg,rgba(37,43,55,.28),rgba(37,43,55,.62))}
+.hero-in{position:relative;z-index:2;width:100%;flex:1;display:flex;align-items:center;justify-content:center;text-align:center;padding-top:84px}
+.hero-left{max-width:900px;margin:0 auto}
 @media(max-width:860px){.hero-left{max-width:100%}}
-.hero .postline{color:var(--green);max-width:15ch}
-.hero .lead{margin-top:24px;max-width:48ch;color:#d7dce3}
+.hero .postline{color:var(--green);max-width:none;margin:0 auto}
+.hero .lead{margin:22px auto 0;max-width:54ch;color:#d7dce3}
 .hero-foot{position:relative;z-index:2;padding-bottom:28px}
 .hero-foot .wrap{display:flex;flex-wrap:wrap;gap:12px 30px;font-family:var(--disp);font-size:16px;font-weight:600;color:#cfd5de}
 .hero-foot a{color:#cfd5de;transition:color .2s}
 .hero-foot a:hover{color:var(--green)}
 
 /* логотип бренда (реальный файл logo.png) */
-.logo-img{display:block;max-width:min(560px,82%);height:auto;margin-bottom:20px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.5))}
-@media(max-width:520px){.logo-img{max-width:92%}}
+.logo-img{display:block;max-width:min(300px,68%);height:auto;margin:0 auto 24px;filter:drop-shadow(0 6px 16px rgba(0,0,0,.5))}
+@media(max-width:520px){.logo-img{max-width:78%}}
 .postline{font-family:var(--disp);font-weight:800;color:var(--green);font-size:clamp(36px,7.4vw,70px);letter-spacing:-.025em;line-height:1;max-width:15ch}
 @media(max-width:520px){.logo3d{white-space:normal}}
 
@@ -221,11 +221,12 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
   <div class="hero-veil"></div>
   <div class="hero-in">
     <div class="wrap rv">
+      <div style="font-family:var(--font);color:#fff;font-size:16px;font-weight:600;margin-bottom:18px;opacity:.9">Привет 🙂 Рада, что заглянул(а).</div>
+
       <img class="logo-img" src="logo.png" alt="Architect Systems AI">
 
       <div class="hero-left">
-        <div style="font-family:var(--font);color:#fff;font-size:17px;font-weight:600;margin-bottom:16px">Привет 🙂 Рада, что заглянул(а).</div>
-        <h1 class="postline">Системы управления искусственным интеллектом</h1>
+        <h1 class="postline">Системы управления<br>искусственным интеллектом</h1>
         <p class="lead">Здесь можно забрать бесплатное, взять готовое или собрать систему под себя — метод, приложения и AI-агенты, которые превращают искусственный интеллект в управляемый инструмент.</p>
       </div>
     </div>
