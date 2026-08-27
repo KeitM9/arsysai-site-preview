@@ -238,16 +238,12 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
 #why{padding-top:34px;padding-bottom:26px}
 #why .newsitem{margin-top:18px;padding:24px 28px}
 #why .lead{margin-top:12px}
-/* метод — буквы в один ряд, читается PROMPT */
+/* метод — только буквы в ряд (значок + подпись), читается PROMPT */
 .pm{white-space:nowrap}
-.method{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-top:26px;text-align:left}
-.method .mcard{background:var(--dark-2);border:1px solid var(--dark-3);border-radius:var(--r);padding:14px 12px;transition:border-color .25s}
-.method .mcard:hover{border-color:var(--green)}
-.method .mL{width:27px;height:27px;background:var(--green);color:var(--dark);font-weight:800;font-size:15px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;margin-bottom:9px}
-.method .mN{font-weight:700;font-size:14px;color:#fff;margin-bottom:4px}
-.method .mcard p{color:#9aa2b0;font-size:11.5px;line-height:1.35;margin:0}
-@media(max-width:820px){.method{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:480px){.method{grid-template-columns:repeat(2,1fr)}}
+.method{display:flex;justify-content:center;flex-wrap:wrap;gap:14px 22px;margin-top:26px;text-align:center}
+.method .mcard{width:82px}
+.method .mL{width:48px;height:48px;background:var(--green);color:var(--dark);font-weight:800;font-size:23px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;margin:0 auto 9px}
+.method .mN{font-weight:600;font-size:14px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -341,12 +337,12 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
       <p class="lead" style="margin-top:14px">Любой нейросетью нельзя управлять вслепую — сначала нужно понять, из чего собирается точный запрос. Это фундамент <span class="pm">PROMPT&nbsp;MASTER</span>, из которого строится вся система.</p>
     </div>
     <div class="method">
-      <div class="mcard rv"><div class="mL">P</div><div class="mN">Persona</div><p>кто пишет — экспертный бэкграунд</p></div>
-      <div class="mcard rv"><div class="mL">R</div><div class="mN">Role</div><p>что делает — функция</p></div>
-      <div class="mcard rv"><div class="mL">O</div><div class="mN">Objective</div><p>какой итог — результат</p></div>
-      <div class="mcard rv"><div class="mL">M</div><div class="mN">Method</div><p>по какой схеме — AIDA, SWOT</p></div>
-      <div class="mcard rv"><div class="mL">P</div><div class="mN">Parameters</div><p>в каких рамках — формат</p></div>
-      <div class="mcard rv"><div class="mL">T</div><div class="mN">Tone</div><p>как звучит — окрас</p></div>
+      <div class="mcard rv"><div class="mL">P</div><div class="mN">Persona</div></div>
+      <div class="mcard rv"><div class="mL">R</div><div class="mN">Role</div></div>
+      <div class="mcard rv"><div class="mL">O</div><div class="mN">Objective</div></div>
+      <div class="mcard rv"><div class="mL">M</div><div class="mN">Method</div></div>
+      <div class="mcard rv"><div class="mL">P</div><div class="mN">Parameters</div></div>
+      <div class="mcard rv"><div class="mL">T</div><div class="mN">Tone</div></div>
     </div>
     <p class="lead rv" style="max-width:720px;margin:30px auto 0;color:var(--muted)">Метод, 25 экспертных ролей и 25 верификаторов качества собраны в Инженерном справочнике <span class="pm">PROMPT&nbsp;MASTER</span>.
     Он объясняет, как AI работает изнутри — и почему большинство получают слабые результаты, используя нейросеть как поисковик, а не как управляемую систему.</p>
