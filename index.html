@@ -200,10 +200,10 @@ p.body{font-size:17px;line-height:1.66;color:var(--muted);max-width:62ch;font-we
 /* === всё по центру + компактнее (десктоп и мобилка) === */
 .sec{padding:66px 0;text-align:center}
 .sec>.wrap>*{margin-left:auto;margin-right:auto}
-/* читаемые абзацы — по левому краю (заголовки остаются по центру) */
-.sec .body{text-align:left}
-#what .lead,#how .lead{text-align:left}
-#built .pullline{text-align:left}
+/* всё по центру; строки балансируем, чтобы предложение не начиналось в конце строки */
+.sec .lead{text-wrap:balance}
+.sec .body{max-width:640px;margin-left:auto;margin-right:auto;text-wrap:balance}
+h1,h2,h3,.pullline{text-wrap:balance}
 .asym{grid-template-columns:1fr;justify-items:center;gap:16px;max-width:820px}
 .asym>div{text-align:center}
 .newsitem{text-align:center}
