@@ -264,6 +264,13 @@ h1,h2,h3,.pullline{text-wrap:balance}
 .darkshow{background:var(--dark)}
 .midcta{max-width:640px;margin:20px auto 0;text-align:center}
 .midcta p{color:#cfd5de;font-size:16px;margin-bottom:16px}
+.forwho{max-width:760px;margin:22px auto 0;display:flex;flex-direction:column;gap:10px}
+.forwho .fw{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:13px 18px;text-align:center}
+.forwho .fw b{color:var(--ink);font-family:'Oswald',sans-serif;font-weight:700}
+.forwho .fw span{color:var(--muted)}
+.faq{max-width:720px;margin:20px auto 0}
+.faq .q{font-family:'Oswald',sans-serif;font-weight:700;font-size:17px;color:var(--ink);margin-top:18px}
+.faq .a{color:var(--muted);font-size:15px;margin-top:4px;text-wrap:balance}
 .ecolayout{display:grid;gap:11px;max-width:1080px;margin:14px auto 0;align-items:center;
   grid-template-columns:0.9fr 1.2fr 0.9fr;
   grid-template-areas:"c1 mid c4" "c2 mid c5" "c3 mid c6"}
@@ -536,6 +543,22 @@ h1,h2,h3,.pullline{text-wrap:balance}
   </div>
 </section>
 
+<!-- ДЛЯ КОГО -->
+<section class="sec mist" id="forwho">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px;margin:0 auto">
+      <span class="kick">Для кого</span>
+      <h2 style="margin-top:12px">Кому это закрывает задачу</h2>
+    </div>
+    <div class="forwho rv">
+      <div class="fw"><b>Блогеру и эксперту</b> <span>— контент и воронка, которые ведут читателя к продаже.</span></div>
+      <div class="fw"><b>Предпринимателю</b> <span>— системы, что берут на себя рутину, переписку и продажи.</span></div>
+      <div class="fw"><b>Тем, кто заказывает или генерирует код</b> <span>— проверка и защита от дыр и утечек.</span></div>
+      <div class="fw"><b>Каждому, кто хочет от AI результат уровня команды</b> <span>— без программирования, простыми словами.</span></div>
+    </div>
+  </div>
+</section>
+
 <!-- 6 · ЧТО УЖЕ СОЗДАНО -->
 <section class="sec" id="built">
   <div class="wrap">
@@ -551,6 +574,26 @@ h1,h2,h3,.pullline{text-wrap:balance}
       <p class="body" style="margin-top:14px">Из этих бесконечных экспериментов и правок появился PROMPT MASTER. Я поняла, что мне не хватало фундамента для работы с нейросетями. Сегодня этот опыт собран в систему.</p>
       <p class="body" style="margin-top:14px">Первый результат — Протокол управления AI: помогает контролировать время, деньги и лимиты при работе с нейросетями. Готовый протокол, который помогает нейросетям отвечать точнее с первого раза, не выдумывать информацию и не тратить токены впустую.</p>
       <p class="body" style="margin-top:14px">Когда я научилась правильно работать с AI, нейросети начали давать мне намного больше пользы и информации. Я стала видеть больше возможностей, находить новые решения и мыслить шире. Так постепенно появились мои собственные системы управления AI.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec" id="faq">
+  <div class="wrap">
+    <div class="rv" style="max-width:720px;margin:0 auto">
+      <span class="kick">Вопросы</span>
+      <h2 style="margin-top:12px">Коротко о главном</h2>
+    </div>
+    <div class="faq rv">
+      <p class="q">Я не программист — получится?</p>
+      <p class="a">Да. Описываешь задачу простыми словами — система собирает результат.</p>
+      <p class="q">Нужен VPN?</p>
+      <p class="a">Всё работает из любой точки мира, прямо в браузере.</p>
+      <p class="q">На чём это работает?</p>
+      <p class="a">На Claude — одной из сильнейших моделей.</p>
+      <p class="q">Есть бесплатный вход?</p>
+      <p class="a">Да. В боте — бесплатные материалы, в AUDIT — 3 разбора бесплатно.</p>
     </div>
   </div>
 </section>
