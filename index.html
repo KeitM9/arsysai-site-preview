@@ -30,7 +30,7 @@ section{position:relative}
 .dark{background:var(--dark);color:var(--white)}
 .mist{background:var(--mist)}
 .sec{padding:100px 0}
-@media(max-width:680px){.sec{padding:32px 0}.wrap{padding:0 22px}}
+@media(max-width:680px){.sec{padding:20px 0}.wrap{padding:0 22px}}
 
 h1,h2,h3{font-family:var(--disp);font-weight:800;letter-spacing:-.02em;line-height:1.08;text-wrap:balance}
 h1{font-size:clamp(34px,5vw,60px)}
@@ -208,7 +208,7 @@ html,body{overflow-x:hidden}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
 
 /* === всё по центру + компактнее (десктоп и мобилка) === */
-.sec{padding:46px 0;text-align:center}
+.sec{padding:30px 0;text-align:center}
 .sec>.wrap>*{margin-left:auto;margin-right:auto}
 /* всё по центру; строки балансируем, чтобы предложение не начиналось в конце строки */
 .sec .lead{text-wrap:balance}
@@ -226,8 +226,8 @@ h1,h2,h3,.pullline{text-wrap:balance}
 .def .short,.pullline{border-left:none;border-top:3px solid var(--green);padding:16px 0 0}
 .pillar{text-align:center}
 /* раздел «Что изменилось» — компактнее, заголовок зелёный */
-#what{padding-bottom:40px}
-#ladder{padding-top:40px}
+#what{padding-bottom:20px}
+#ladder{padding-top:22px}
 #ladder h2{color:var(--green)}
 #ladder .beforeafter{margin-top:18px}
 #ladder .lead{margin-top:10px}
@@ -262,9 +262,9 @@ h1,h2,h3,.pullline{text-wrap:balance}
 .scenrow .scflow{color:var(--ink);font-size:15px;line-height:1.4}
 /* тёмный showcase: круг в центре, карточки вокруг него */
 .darkshow{background:var(--dark)}
-.midcta{max-width:640px;margin:36px auto 0;text-align:center}
+.midcta{max-width:640px;margin:20px auto 0;text-align:center}
 .midcta p{color:#cfd5de;font-size:16px;margin-bottom:16px}
-.ecolayout{display:grid;gap:11px;max-width:1080px;margin:26px auto 0;align-items:center;
+.ecolayout{display:grid;gap:11px;max-width:1080px;margin:14px auto 0;align-items:center;
   grid-template-columns:0.9fr 1.2fr 0.9fr;
   grid-template-areas:"c1 mid c4" "c2 mid c5" "c3 mid c6"}
 .circleimg{grid-area:mid;width:100%;max-width:400px;height:auto;display:block;justify-self:center}
@@ -540,13 +540,14 @@ h1,h2,h3,.pullline{text-wrap:balance}
 <section class="sec" id="built">
   <div class="wrap">
     <div class="rv" style="max-width:760px">
-      <span class="kick">Как всё началось</span>
+      <span class="kick">История</span>
+      <h2 style="margin-top:12px">С чего всё началось</h2>
       <p class="body" style="font-size:19px;color:var(--ink);margin-top:16px">С 2023 года я начала заниматься нейросетями. Месяцами экспериментировала, пробовала разные сервисы и тратила деньги в надежде, что очередной инструмент наконец даст нужный результат.</p>
       <p class="body" style="margin-top:14px">Постоянно переписывала запросы, исправляла ошибки, что-то переделывала. Иногда просто бросала и писала тексты и сценарии сама.</p>
       <p class="body" style="margin-top:14px">Потом поняла свою главную ошибку — я не умела правильно ставить задачи AI. Использовала чужие промпты, которые не всегда подходили под мою задачу. А результат напрямую зависит от того, насколько точно ты объяснил AI, что тебе нужно.</p>
-      <p class="body" style="margin-top:14px;font-size:15px">Модель устроена так: в неё загрузили тексты, книги и знания миллионов людей — объём больше, чем удержит один ум. Внутри это хранится как связи между словами и смыслами. На каждый запрос модель предсказывает самый подходящий ответ из всего, что видела. Поэтому в десятках задач она обходит человека — у неё под рукой знания целого мира.</p>
+      <p class="body" style="margin-top:14px;font-size:15px">Нейросеть устроена так: в неё загрузили тексты, книги и знания миллионов людей — объём больше, чем удержит один ум. Внутри это хранится как связи между словами и смыслами. На каждый запрос модель предсказывает самый подходящий ответ из всего, что видела. Поэтому в десятках задач она обходит человека — у неё под рукой знания целого мира.</p>
       <p class="body" style="margin-top:14px;font-size:15px">Всё это лежит внутри, как в огромной библиотеке. Достаёт нужное тот, кто умеет спросить — точной инструкцией, промптом, контекстом. Задаёшь размыто — получаешь общий ответ. Даёшь модели полную картину — она достаёт из глубины именно твоё. Здесь и начинается управление: ты ведёшь модель, забираешь из неё нужное и проверяешь результат.</p>
-      <p class="pullline">Модель умнее, потому что в ней — знания миллионов. Управляет тот, кто умеет их забрать.</p>
+      <p class="pullline">Нейросеть умнее, потому что в ней — знания миллионов. Управляет тот, кто умеет их забрать.</p>
       <p class="body" style="margin-top:14px">Из этих бесконечных экспериментов и правок появился PROMPT MASTER. Я поняла, что мне не хватало фундамента для работы с нейросетями. Сегодня этот опыт собран в систему.</p>
       <p class="body" style="margin-top:14px">Первый результат — Протокол управления AI: помогает контролировать время, деньги и лимиты при работе с нейросетями. Готовый протокол, который помогает нейросетям отвечать точнее с первого раза, не выдумывать информацию и не тратить токены впустую.</p>
       <p class="body" style="margin-top:14px">Когда я научилась правильно работать с AI, нейросети начали давать мне намного больше пользы и информации. Я стала видеть больше возможностей, находить новые решения и мыслить шире. Так постепенно появились мои собственные системы управления AI.</p>
