@@ -403,6 +403,48 @@ h1,h2,h3,.pullline{text-wrap:balance}
 .method .mcard{width:82px}
 .method .mL{width:48px;height:48px;background:var(--green);color:var(--dark);font-weight:800;font-size:23px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;margin:0 auto 9px}
 .method .mN{font-weight:600;font-size:14px;color:var(--ink)}
+
+/* === ХАБ-хвост (от «Для кого» вниз) === */
+.hubbtns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.routes{max-width:980px;margin:24px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;text-align:left}
+@media(max-width:700px){.routes{grid-template-columns:1fr}}
+.route{display:block;background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;transition:border-color .2s,background .2s}
+.route:hover{border-color:var(--green);background:rgba(180,250,178,.06)}
+.route .rt{font-family:'Oswald',sans-serif;font-weight:700;color:var(--ink);font-size:15.5px}
+.route .rd{color:var(--muted);font-size:13px;line-height:1.4;margin:4px 0 8px}
+.route .rgo{color:var(--green-ink);font-family:'Oswald',sans-serif;font-weight:700;font-size:13px}
+.prooftypes{max-width:760px;margin:14px auto 0;color:var(--muted);font-size:14px;line-height:1.5}
+.prooftypes b{color:var(--ink)}
+.proofs{max-width:980px;margin:20px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:left}
+@media(max-width:760px){.proofs{grid-template-columns:1fr}}
+.proof{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.proof .ptag{font-family:'Oswald',sans-serif;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-ink)}
+.proof h4{font-size:15px;color:var(--ink);margin:4px 0 4px;font-family:'Oswald',sans-serif}
+.proof p{font-size:13px;color:var(--muted);line-height:1.45}
+.steps5{max-width:980px;margin:22px auto 0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;text-align:left}
+@media(max-width:820px){.steps5{grid-template-columns:1fr}}
+.step5{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:16px 14px}
+.step5 .num{font-family:'Oswald',sans-serif;font-weight:700;color:var(--green-ink);font-size:14px}
+.step5 h4{font-size:15px;color:var(--ink);margin:4px 0 4px;font-family:'Oswald',sans-serif}
+.step5 p{font-size:12.5px;color:var(--muted);line-height:1.4}
+.dark .step5{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.10)}
+.dark .step5 h4{color:#fff}.dark .step5 p{color:#aeb6c2}
+.formats{max-width:960px;margin:22px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:left}
+@media(max-width:700px){.formats{grid-template-columns:1fr}}
+.fmt{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.fmt h4{font-family:'Oswald',sans-serif;font-size:17px;color:var(--ink);margin-bottom:5px}
+.fmt p{color:var(--muted);font-size:13.5px;line-height:1.5;margin-bottom:10px}
+.fmt a{color:var(--green-ink);font-weight:700;font-size:13.5px;font-family:'Oswald',sans-serif}
+.princ{max-width:820px;margin:20px auto 0;display:grid;grid-template-columns:1fr 1fr;gap:8px 22px;text-align:left}
+@media(max-width:560px){.princ{grid-template-columns:1fr}}
+.princ div{color:#c7cdd6;font-size:14px;padding-left:18px;position:relative;line-height:1.45}
+.princ div::before{content:'\25B9';position:absolute;left:0;color:var(--green)}
+.stackline{max-width:760px;margin:18px auto 0;color:#aeb6c2;font-size:13.5px;line-height:1.6}
+.formcard{max-width:640px;margin:20px auto 0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.10);border-radius:14px;padding:22px;text-align:left}
+.formcard ul{list-style:none;display:flex;flex-direction:column;gap:6px;color:#c7cdd6;font-size:14px;margin:0 0 16px;padding:0}
+.formcard li::before{content:'\2014  ';color:var(--green)}
+.afterreq{max-width:760px;margin:16px auto 0;color:var(--muted-d);font-size:13.5px;line-height:1.5}
+
 </style>
 </head>
 <body>
@@ -573,38 +615,99 @@ h1,h2,h3,.pullline{text-wrap:balance}
   </div>
 </section>
 
-<!-- ДЛЯ КОГО -->
-<section class="sec mist" id="forwho">
+<!-- МАРШРУТЫ -->
+<section class="sec mist" id="routes">
   <div class="wrap">
     <div class="rv" style="max-width:760px;margin:0 auto">
-      <span class="kick">Для кого</span>
-      <h2 style="margin-top:12px">Кому это закрывает задачу</h2>
+      <span class="kick">Решения</span>
+      <h2>Выбери задачу — система подберётся под неё</h2>
+      <p class="lead" style="margin:14px auto 0">Войти можно с любой точки. Достаточно выбрать свою задачу — покажу подходящий вход.</p>
     </div>
-    <div class="forwho rv">
-      <div class="fw"><b>Блогеру и эксперту</b> <span>— контент и воронка, которые ведут читателя к продаже.</span></div>
-      <div class="fw"><b>Предпринимателю</b> <span>— системы, что берут на себя рутину, переписку и продажи.</span></div>
-      <div class="fw"><b>Тем, кто заказывает или генерирует код</b> <span>— проверка и защита от дыр и утечек.</span></div>
-      <div class="fw"><b>Каждому, кто хочет от AI результат уровня команды</b> <span>— без программирования, простыми словами.</span></div>
+    <div class="routes rv">
+      <a class="route" href="https://t.me/auditarsysai_bot" target="_blank" rel="noopener"><div class="rt">Понять, что внедрять</div><div class="rd">Где AI даст эффект, а где риск. Начни с диагностики. Решения: Аудит, PROMPT MASTER.</div><div class="rgo">Начать с аудита →</div></a>
+      <a class="route" href="prompt-master.html"><div class="rt">Научиться управлять AI</div><div class="rd">Команда получает разные результаты. Нужен единый метод. Решения: PROMPT MASTER, APP.</div><div class="rgo">Изучить метод →</div></a>
+      <a class="route" href="https://app.arsysai.com" target="_blank" rel="noopener"><div class="rt">Быстро получить рабочий промпт</div><div class="rd">Описываешь задачу словами — получаешь готовую инструкцию за минуту. Решение: APP.</div><div class="rgo">Попробовать приложение →</div></a>
+      <a class="route" href="projects.html"><div class="rt">Автоматизировать отдел</div><div class="rd">Команда агентов под функции бизнеса. Решения: AI Агенты, Аудит.</div><div class="rgo">Собрать AI-команду →</div></a>
+      <a class="route" href="projects.html"><div class="rt">Личный AI-ассистент</div><div class="rd">Задачи, память, план дня, проекты в одном контуре. Решение: Assistant.</div><div class="rgo">Настроить помощника →</div></a>
+      <a class="route" href="projects.html"><div class="rt">Контент и продажи</div><div class="rd">Ниша и экспертность превращаются в воронку к заявке. Решения: Контент Воронка, APP.</div><div class="rgo">Собрать воронку →</div></a>
+      <a class="route" href="https://t.me/auditarsysai_bot" target="_blank" rel="noopener"><div class="rt">Проверить решение</div><div class="rd">Договор, сайт, текст, промпт или AI-агента на риски. Решение: Аудит.</div><div class="rgo">Запустить проверку →</div></a>
+      <a class="route" href="https://t.me/sysarchitect_bot" target="_blank" rel="noopener"><div class="rt">Пока не знаю, с чего начать</div><div class="rd">Начни с бесплатного разбора — определим, что нужно именно тебе.</div><div class="rgo">Получить бесплатный разбор →</div></a>
     </div>
   </div>
 </section>
 
-<!-- 6 · ЧТО УЖЕ СОЗДАНО -->
-<section class="sec" id="built">
+<!-- ДОКАЗАТЕЛЬСТВА -->
+<section class="sec" id="proof">
   <div class="wrap">
-    <div class="rv" style="max-width:760px">
-      <span class="kick">История</span>
-      <h2 style="margin-top:12px">С чего всё началось</h2>
-      <p class="body" style="font-size:19px;color:var(--ink);margin-top:16px">С 2023 года я начала заниматься нейросетями. Месяцами экспериментировала, пробовала разные сервисы и тратила деньги в надежде, что очередной инструмент наконец даст нужный результат.</p>
-      <p class="body" style="margin-top:14px">Постоянно переписывала запросы, исправляла ошибки, что-то переделывала. Иногда просто бросала и писала тексты и сценарии сама.</p>
-      <p class="body" style="margin-top:14px">Потом поняла свою главную ошибку — я не умела правильно ставить задачи AI. Использовала чужие промпты, которые не всегда подходили под мою задачу. А результат напрямую зависит от того, насколько точно ты объяснил AI, что тебе нужно.</p>
-      <p class="body" style="margin-top:14px;font-size:15px">Нейросеть устроена так: в неё загрузили тексты, книги и знания миллионов людей — объём больше, чем удержит один ум. Внутри это хранится как связи между словами и смыслами. На каждый запрос модель предсказывает самый подходящий ответ из всего, что видела. Поэтому в десятках задач она обходит человека — у неё под рукой знания целого мира.</p>
-      <p class="body" style="margin-top:14px;font-size:15px">Всё это лежит внутри, как в огромной библиотеке. Достаёт нужное тот, кто умеет спросить — точной инструкцией, промптом, контекстом. Задаёшь размыто — получаешь общий ответ. Даёшь модели полную картину — она достаёт из глубины именно твоё. Здесь и начинается управление: ты ведёшь модель, забираешь из неё нужное и проверяешь результат.</p>
-      <p class="pullline">Нейросеть умнее, потому что в ней — знания миллионов. Управляет тот, кто умеет их забрать.</p>
-      <p class="body" style="margin-top:14px">Из этих бесконечных экспериментов и правок появился PROMPT MASTER. Я поняла, что мне не хватало фундамента для работы с нейросетями. Сегодня этот опыт собран в систему.</p>
-      <p class="body" style="margin-top:14px">Первый результат — Протокол управления AI: помогает контролировать время, деньги и лимиты при работе с нейросетями. Готовый протокол, который помогает нейросетям отвечать точнее с первого раза, не выдумывать информацию и не тратить токены впустую.</p>
-      <p class="body" style="margin-top:14px">Когда я научилась правильно работать с AI, нейросети начали давать мне намного больше пользы и информации. Я стала видеть больше возможностей, находить новые решения и мыслить шире. Так постепенно появились мои собственные системы управления AI.</p>
+    <div class="rv" style="max-width:760px;margin:0 auto">
+      <span class="kick">Что уже работает</span>
+      <h2>Как это выглядит в деле</h2>
+      <p class="prooftypes">Материалы помечены типом: <b>Кейс</b> — реальный клиентский результат · <b>Демонстрация</b> — как работает продукт · <b>Эксперимент</b> — возможности и границы технологии.</p>
     </div>
+    <div class="proofs rv">
+      <div class="proof"><div class="ptag">Демонстрация</div><h4>PROMPT MASTER APP</h4><p>Вход → обработка → готовый промпт. Приложение на базе Claude, работает из браузера.</p></div>
+      <div class="proof"><div class="ptag">Демонстрация</div><h4>Карта AI-команды</h4><p>Роли агентов и кто что проверяет — арсенал под конкретный бизнес.</p></div>
+      <div class="proof"><div class="ptag">Демонстрация</div><h4>Отчёт Аудита</h4><p>Ошибка → чем опасна → насколько критична → как исправить. 21 агент на Claude.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- КАК РАБОТАЕТ ПРОЦЕСС -->
+<section class="sec dark" id="process">
+  <div class="wrap">
+    <div class="rv" style="max-width:820px;margin:0 auto">
+      <span class="kick">Как работаю</span>
+      <h2>Как собирается AI-система под твою задачу</h2>
+      <p class="lead" style="margin:14px auto 0">Ты получаешь спроектированный рабочий процесс с понятными входами, действиями, проверками и результатом.</p>
+    </div>
+    <div class="steps5 rv">
+      <div class="step5"><div class="num">01</div><h4>Изучаю</h4><p>Бизнес, процессы, роли, документы, инструменты и текущие узкие места.</p></div>
+      <div class="step5"><div class="num">02</div><h4>Определяю</h4><p>Что даст больший результат: аудит, ассистент, агент, автоматизация или контент.</p></div>
+      <div class="step5"><div class="num">03</div><h4>Проектирую</h4><p>Роли AI, логику, источники данных, ограничения, правила проверки и передачу результата человеку.</p></div>
+      <div class="step5"><div class="num">04</div><h4>Собираю и проверяю</h4><p>Промпты, агентов, приложения или воронки. Проверка на реальных сценариях.</p></div>
+      <div class="step5"><div class="num">05</div><h4>Передаю и сопровождаю</h4><p>Документирую систему, обучаю команду и при необходимости развиваю решение.</p></div>
+    </div>
+    <p class="lead rv" style="max-width:820px;margin:22px auto 0">Приходишь с задачей — уходишь с готовой AI-системой, понятными правилами управления и инструкцией, как ей пользоваться.</p>
+    <div class="hubbtns rv"><a class="btn btn-green" href="https://t.me/sysarchitect_bot" target="_blank" rel="noopener">Разобрать мою задачу</a></div>
+  </div>
+</section>
+
+<!-- ФОРМАТЫ РАБОТЫ -->
+<section class="sec" id="formats">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px;margin:0 auto">
+      <span class="kick">Форматы</span>
+      <h2>Как можно начать</h2>
+      <p class="lead" style="margin:14px auto 0">Собирать всю систему сразу не обязательно. Вход возможен с одного формата — от бесплатной диагностики до комплексного проектирования.</p>
+    </div>
+    <div class="formats rv">
+      <div class="fmt"><h4>Диагностика</h4><p>Понять, что внедрять и где риск. Интервью, карта процессов, список AI-возможностей, оценка рисков и приоритетный план.</p><a href="https://t.me/auditarsysai_bot" target="_blank" rel="noopener">Начать с аудита →</a></div>
+      <div class="fmt"><h4>Один модуль</h4><p>Конкретная задача: AI-агент, ассистент, контентная воронка, приложение или метод для команды.</p><a href="https://t.me/sysarchitect_bot" target="_blank" rel="noopener">Обсудить модуль →</a></div>
+      <div class="fmt"><h4>Комплексная система</h4><p>Несколько модулей под один процесс: архитектура, агенты, интеграции, тестирование, документация, обучение и сопровождение.</p><a href="https://t.me/sysarchitect_bot" target="_blank" rel="noopener">Запросить проектирование →</a></div>
+      <div class="fmt"><h4>Сопровождение</h4><p>Развитие работающей системы: доработка агентов, обновление контекста, расширение функций.</p><a href="https://t.me/sysarchitect_bot" target="_blank" rel="noopener">Обсудить сопровождение →</a></div>
+    </div>
+    <p class="afterreq" style="text-align:center">Стоимость зависит от объёма работы, числа модулей и уровня интеграции. Опиши задачу — определю формат и ориентир по срокам.</p>
+  </div>
+</section>
+
+<!-- О СОЗДАТЕЛЕ -->
+<section class="sec dark" id="about">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px;margin:0 auto">
+      <span class="kick">О создателе</span>
+      <h2>Кто проектирует систему</h2>
+      <p class="lead" style="margin:14px auto 0">AI System Architect, создатель метода PROMPT MASTER и систем Architect Systems AI. С 2023 года работаю с нейросетями: путь от переписывания промптов к проектированию контекста и AI-систем.</p>
+      <p class="body" style="margin-top:14px;color:#c7cdd6">Сначала я делала то же, что и многие: переписывала промпты, тестировала сервисы, искала формулировку, которая наконец даст результат. Со временем стало ясно: дело в системе — роли, контексте, данных, ограничениях и проверке. Так появился PROMPT MASTER — метод управления всей рабочей средой AI. На его основе собраны приложения, агенты, ассистенты, воронки и система аудита.</p>
+    </div>
+    <div class="princ rv">
+      <div>Сначала задача, потом технология.</div>
+      <div>Человек сохраняет контроль над критическими решениями.</div>
+      <div>Каждый агент имеет конкретную роль.</div>
+      <div>Результат проверяется.</div>
+      <div>Система документируется.</div>
+      <div>Данные клиента используются только с разрешения.</div>
+    </div>
+    <p class="stackline rv">Инструмент выбираю под задачу — по данным, стоимости, скорости и уровню контроля. В работе: Claude, Telegram, n8n, Railway, API и интеграции, базы знаний, системы автоматизации.</p>
   </div>
 </section>
 
@@ -613,32 +716,63 @@ h1,h2,h3,.pullline{text-wrap:balance}
   <div class="wrap">
     <div class="rv" style="max-width:720px;margin:0 auto">
       <span class="kick">Вопросы</span>
-      <h2 style="margin-top:12px">Коротко о главном</h2>
+      <h2>Коротко о главном</h2>
     </div>
     <div class="faq rv">
       <p class="q">Я не программист — получится?</p>
-      <p class="a">Да. Описываешь задачу простыми словами — система собирает результат.</p>
-      <p class="q">Нужен VPN?</p>
-      <p class="a">Всё работает из любой точки мира, прямо в браузере.</p>
-      <p class="q">На чём это работает?</p>
-      <p class="a">На Claude — одной из сильнейших моделей.</p>
-      <p class="q">Есть бесплатный вход?</p>
-      <p class="a">Да. В боте — бесплатные материалы, в AUDIT — 3 разбора бесплатно.</p>
+      <p class="a">Да. Задачу описываешь обычными словами, метод и система собирают результат. Программирование не требуется.</p>
+      <p class="q">С чего лучше начать?</p>
+      <p class="a">Начни с аудита. Он покажет, где AI даст эффект, где есть риск, и определит подходящие модули.</p>
+      <p class="q">Можно начать с одного модуля?</p>
+      <p class="a">Да. Вход возможен с одного формата: диагностика, один модуль, комплексная система или сопровождение.</p>
+      <p class="q">Нужно ли менять текущие инструменты?</p>
+      <p class="a">Сначала смотрим, как AI встраивается в существующие процессы. Меняем только то, что мешает результату.</p>
+      <p class="q">Что происходит с моими данными?</p>
+      <p class="a">Данные используются только с разрешения. Определяем, что можно передавать модели, где нужна проверка человеком и как ведётся журнал действий.</p>
+      <p class="q">На каких моделях это работает?</p>
+      <p class="a">Метод отработан на Claude и применим к другим современным моделям с учётом их особенностей.</p>
+      <p class="q">Сколько времени занимает запуск?</p>
+      <p class="a">Один модуль — быстрее, комплексная система — дольше. Ориентир определяем после разбора задачи.</p>
+      <p class="q">Как понять стоимость?</p>
+      <p class="a">Стоимость зависит от объёма, числа модулей и уровня интеграции. После разбора задачи назову формат и ориентир по срокам.</p>
     </div>
   </div>
 </section>
 
-<!-- МЯГКИЙ ВХОД -->
-<section class="sec mist">
+<!-- БЕСПЛАТНЫЙ ВХОД -->
+<section class="sec mist" id="free">
   <div class="wrap">
     <div class="cta rv">
-      <h2>Попробуй на своей задаче.</h2>
-      <p class="lead" style="color:var(--muted)">В боте лежат бесплатные материалы — готовые наборы промптов и ключи к нейросетям. Заберёшь и сразу увидишь разницу между «спросить» и «управлять».</p>
+      <h2>Начни с бесплатных материалов</h2>
+      <p class="lead" style="color:var(--muted)">В Telegram-боте — готовые наборы промптов и ключи к нейросетям. В Аудите — 3 бесплатных разбора. Заберёшь и сразу увидишь разницу между «спросить» и «управлять».</p>
       <div class="btns">
         <a href="https://t.me/arsysai_bot" target="_blank" rel="noopener" class="btn btn-green">Забрать материал</a>
-        <a href="projects.html" class="btn btn-dark">Смотреть проекты</a>
+        <a href="https://t.me/auditarsysai_bot" target="_blank" rel="noopener" class="btn btn-dark">Бесплатная проверка в Аудите</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ФИНАЛЬНЫЙ CTA -->
+<section class="sec dark" id="cta">
+  <div class="wrap">
+    <div class="rv" style="max-width:720px;margin:0 auto">
+      <span class="kick">Обсудить задачу</span>
+      <h2>Опиши задачу — покажу, какой модуль или система под неё подходит</h2>
+      <p class="lead" style="margin:14px auto 0">Расскажи, чем занимается компания и какая задача требует решения. Определю подходящую точку входа и следующий шаг.</p>
+    </div>
+    <div class="formcard rv">
+      <ul>
+        <li>Имя</li>
+        <li>Контакт (Telegram / почта / телефон)</li>
+        <li>Чем занимается компания</li>
+        <li>Какая задача требует решения</li>
+        <li>Желаемый результат</li>
+      </ul>
+      <a href="https://t.me/sysarchitect_bot" target="_blank" rel="noopener" class="btn btn-green" style="width:100%;text-align:center">Разобрать мою задачу</a>
+      <p class="afterreq">Отвечаю после просмотра заявки. Сначала определяем, нужно ли тебе это вообще — без навязывания.</p>
+    </div>
+    <p class="lead rv" style="max-width:760px;margin:18px auto 0;color:#cfd5de">Получаю заявку → уточняю задачу → предлагаю подходящий модуль или маршрут → определяю формат и срок → приступаю к проектированию.</p>
   </div>
 </section>
 
