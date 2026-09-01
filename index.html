@@ -398,6 +398,8 @@ h1,h2,h3,.pullline{text-wrap:balance}
 .rolepick .rp-note a{color:var(--green);border-bottom:1px solid rgba(180,250,178,.45)}
 .rolepick .rp-note a:hover{border-color:var(--green)}
 .method{display:flex;justify-content:center;flex-wrap:wrap;gap:14px 22px;margin-top:26px;text-align:center}
+.mlabel{font-family:'Oswald',sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--green-ink);margin:24px auto 0;text-align:center}
+.mlabel + .method{margin-top:8px}
 .method .mcard{width:82px}
 .method .mL{width:48px;height:48px;background:var(--green);color:var(--dark);font-weight:800;font-size:23px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:'Oswald',sans-serif;margin:0 auto 9px}
 .method .mN{font-weight:600;font-size:14px;color:var(--ink)}
@@ -493,6 +495,7 @@ h1,h2,h3,.pullline{text-wrap:balance}
       <p class="lead" style="margin-top:14px">Всё держится на методе <span class="pm">PROMPT&nbsp;<span class="gr">MASTER</span></span>: он учит собирать контекст задачи и получать точный результат с первого раза. На нём стоит вся система.</p>
     </div>
     <h3 class="mhead rv">Основа системы</h3>
+    <p class="mlabel rv"><span class="pm">PROMPT</span> — техзадание</p>
     <div class="method">
       <div class="mcard rv"><div class="mL">P</div><div class="mN">Persona</div></div>
       <div class="mcard rv"><div class="mL">R</div><div class="mN">Role</div></div>
@@ -501,8 +504,22 @@ h1,h2,h3,.pullline{text-wrap:balance}
       <div class="mcard rv"><div class="mL">P</div><div class="mN">Parameters</div></div>
       <div class="mcard rv"><div class="mL">T</div><div class="mN">Tone</div></div>
     </div>
+    <p class="mlabel rv"><span class="gr">FILTER</span> — что видит и помнит модель</p>
+    <div class="method">
+      <div class="mcard rv"><div class="mL">F</div><div class="mN">Focus</div></div>
+      <div class="mcard rv"><div class="mL">I</div><div class="mN">Isolate</div></div>
+      <div class="mcard rv"><div class="mL">L</div><div class="mN">Limit</div></div>
+      <div class="mcard rv"><div class="mL">T</div><div class="mN">Trim</div></div>
+      <div class="mcard rv"><div class="mL">E</div><div class="mN">Extract</div></div>
+      <div class="mcard rv"><div class="mL">R</div><div class="mN">Retain</div></div>
+    </div>
+    <p class="cxlead rv" style="max-width:760px;margin:24px auto 0">Контекст-инжиниринг — это выстроить всю систему переписки: кто что видит, что помнит, что забывает, в каком порядке приходит информация. Хороший промпт без правильного контекста — красивая фраза в пустоту.</p>
     <p class="lead rv" style="max-width:720px;margin:30px auto 0;color:var(--muted)">Метод, 25 экспертных ролей и 25 верификаторов собраны в Инженерном справочнике <span class="pm">PROMPT&nbsp;<span class="gr">MASTER</span></span>.
     Когда понимаешь, из чего собран промпт, ты читаешь работу нейросети как программист читает код — только здесь читается инструкция. Начинаешь замечать ошибки модели и видеть, как одно слово уводит ответ совсем в другую сторону.</p>
+    <div class="cxtrend rv">
+      <div class="cxtl"><span><b>2023</b> — учили промпты</span><span><b>2025</b> — формулировка перестала быть главным</span><span><b>2026</b> — год контекста</span></div>
+      <p class="cxnote">Умение писать промпты выросло в управление контекстом и стало отдельной специальностью. Спрос сместился от простого чат-бота к управляемым системам с контролем.</p>
+    </div>
   </div>
 </section>
 
@@ -534,81 +551,9 @@ h1,h2,h3,.pullline{text-wrap:balance}
   </div>
 </section>
 
-<!-- КОНТЕКСТ · PROMPT → FILTER -->
-<section class="sec" id="context">
-  <div class="wrap">
-    <div class="rv" style="max-width:820px;margin:0 auto">
-      <span class="kick">Контекст-инжиниринг</span>
-      <h2 style="margin-top:12px">Промпт задаёт задачу. Контекст решает, что видит модель.</h2>
-      <p class="cxlead">Контекст-инжиниринг — это выстроить всю систему переписки: кто что видит, что помнит, что забывает, в каком порядке приходит информация. Хороший промпт без правильного контекста — красивая фраза в пустоту.</p>
-    </div>
-    <div class="cxpair rv">
-      <div class="cxcol">
-        <h3><span class="pm">PROMPT</span></h3>
-        <div class="sub">Техзадание — что и как сделать</div>
-        <div class="cxrow"><span class="l">P</span><span class="t"><b>Persona · Личность</b> — кто пишет, экспертный бэкграунд.</span></div>
-        <div class="cxrow"><span class="l">R</span><span class="t"><b>Role · Роль</b> — что делает: редактор, стратег, критик.</span></div>
-        <div class="cxrow"><span class="l">O</span><span class="t"><b>Objective · Цель</b> — какой итог должен получиться.</span></div>
-        <div class="cxrow"><span class="l">M</span><span class="t"><b>Method · Метод</b> — по какой схеме: AIDA, SWOT.</span></div>
-        <div class="cxrow"><span class="l">P</span><span class="t"><b>Parameters · Рамки</b> — объём, формат, ограничения.</span></div>
-        <div class="cxrow"><span class="l">T</span><span class="t"><b>Tone · Тон</b> — как звучит: провокационно, сухо, дружелюбно.</span></div>
-      </div>
-      <div class="cxcol filter">
-        <h3><span class="gr">FILTER</span></h3>
-        <div class="sub">Условия ответа — что видит и помнит модель</div>
-        <div class="cxrow"><span class="l">F</span><span class="t"><b>Focus · Фокус</b> — на чём внимание модели прямо сейчас.</span></div>
-        <div class="cxrow"><span class="l">I</span><span class="t"><b>Isolate · Изоляция</b> — что держим раздельно между задачами.</span></div>
-        <div class="cxrow"><span class="l">L</span><span class="t"><b>Limit · Отбор</b> — что именно подгружаем в контекст.</span></div>
-        <div class="cxrow"><span class="l">T</span><span class="t"><b>Trim · Сжатие</b> — схлопываем историю в суть.</span></div>
-        <div class="cxrow"><span class="l">E</span><span class="t"><b>Extract · Приоритет</b> — что достаём в первую очередь.</span></div>
-        <div class="cxrow"><span class="l">R</span><span class="t"><b>Retain · Память</b> — что храним вне диалога.</span></div>
-      </div>
-    </div>
-    <div class="cxtrend rv">
-      <div class="cxtl"><span><b>2023</b> — учили промпты</span><span><b>2025</b> — формулировка перестала быть главным</span><span><b>2026</b> — год контекста</span></div>
-      <p class="cxnote">Умение писать промпты выросло в управление контекстом и стало отдельной специальностью. Спрос сместился от простого чат-бота к управляемым системам с контролем.</p>
-    </div>
-  </div>
-</section>
-
 <!-- 5 · ЧТО ДЕЛАЕТ ASA -->
 <section class="sec dark darkshow" id="how">
   <div class="wrap">
-    <div class="rv" style="max-width:760px;margin:0 auto">
-      <span class="kick">Слова под контекст</span>
-      <h2 style="margin-top:16px">Два уровня: PROMPT и FILTER</h2>
-      <p class="lead" style="margin:14px auto 0">Контекст-инжиниринг — это выстроить всю систему переписки: кто что видит, что помнит, что забывает, в каком порядке приходит информация. Хороший промпт без правильного контекста — красивая фраза в пустоту.</p>
-    </div>
-    <style>
-      .pf{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:920px;margin:34px auto 0}
-      .pfcol{display:flex;flex-direction:column;gap:8px}
-      .pfhead{font-family:ui-monospace,'JetBrains Mono','Cascadia Code',monospace;color:var(--green);font-size:14px;font-weight:700;letter-spacing:.04em;margin-bottom:6px}
-      .pfrow{display:flex;align-items:baseline;gap:10px;padding:12px 14px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.09);border-radius:10px;flex-wrap:wrap}
-      .pfl{font-family:ui-monospace,'JetBrains Mono','Cascadia Code',monospace;color:var(--green);font-weight:700;font-size:13px}
-      .pfw{font-family:ui-monospace,'JetBrains Mono','Cascadia Code',monospace;color:#fff;font-weight:700;font-size:14px;min-width:82px}
-      .pfd{color:#c7cdd6;font-size:14px;line-height:1.5;flex:1;min-width:170px}
-      @media(max-width:760px){.pf{grid-template-columns:1fr;gap:26px;text-align:left}.pfrow{text-align:left}}
-    </style>
-    <div class="pf rv">
-      <div class="pfcol">
-        <div class="pfhead">PROMPT — техзадание</div>
-        <div class="pfrow"><span class="pfl">[P]</span><span class="pfw">Persona</span><span class="pfd">Личность — кто пишет, экспертный бэкграунд.</span></div>
-        <div class="pfrow"><span class="pfl">[R]</span><span class="pfw">Role</span><span class="pfd">Роль — что делает: редактор, стратег, критик.</span></div>
-        <div class="pfrow"><span class="pfl">[O]</span><span class="pfw">Objective</span><span class="pfd">Цель — какой итог должен получиться.</span></div>
-        <div class="pfrow"><span class="pfl">[M]</span><span class="pfw">Method</span><span class="pfd">Метод — по какой схеме: AIDA, SWOT.</span></div>
-        <div class="pfrow"><span class="pfl">[P]</span><span class="pfw">Parameters</span><span class="pfd">Рамки — объём, формат, что нельзя делать.</span></div>
-        <div class="pfrow"><span class="pfl">[T]</span><span class="pfw">Tone</span><span class="pfd">Тон — как звучит: провокационно, сухо, дружелюбно.</span></div>
-      </div>
-      <div class="pfcol">
-        <div class="pfhead">FILTER — условия ответа</div>
-        <div class="pfrow"><span class="pfl">[F]</span><span class="pfw">Focus</span><span class="pfd">Фокус — на чём внимание модели прямо сейчас.</span></div>
-        <div class="pfrow"><span class="pfl">[I]</span><span class="pfw">Isolate</span><span class="pfd">Изоляция — что не смешиваем между задачами.</span></div>
-        <div class="pfrow"><span class="pfl">[L]</span><span class="pfw">Limit</span><span class="pfd">Отбор — что именно подгружаем в контекст.</span></div>
-        <div class="pfrow"><span class="pfl">[T]</span><span class="pfw">Trim</span><span class="pfd">Сжатие — схлопываем историю в суть.</span></div>
-        <div class="pfrow"><span class="pfl">[E]</span><span class="pfw">Extract</span><span class="pfd">Приоритет — что достаём в первую очередь.</span></div>
-        <div class="pfrow"><span class="pfl">[R]</span><span class="pfw">Retain</span><span class="pfd">Память — что храним вне диалога.</span></div>
-      </div>
-    </div>
     <div class="rv" style="max-width:760px;margin:0 auto">
       <span class="kick">Готовые проекты</span>
       <h2 style="margin-top:16px">Собираю системы под твою задачу</h2>
