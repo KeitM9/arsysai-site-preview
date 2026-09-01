@@ -513,7 +513,7 @@ h1,h2,h3,.pullline{text-wrap:balance}
       <div class="mcard rv"><div class="mL">E</div><div class="mN">Extract</div></div>
       <div class="mcard rv"><div class="mL">R</div><div class="mN">Retain</div></div>
     </div>
-    <p class="cxlead rv" style="max-width:760px;margin:24px auto 0">Контекст-инжиниринг — это выстроить всю систему переписки: кто что видит, что помнит, что забывает, в каком порядке приходит информация. Хороший промпт без правильного контекста — красивая фраза в пустоту.</p>
+    <p class="cxlead rv" style="max-width:760px;margin:24px auto 0">Контекст-инжиниринг — это выстроить всю систему переписки: кто что видит, что помнит, что забывает, в каком порядке приходит информация. Промпт раскрывается на полную, когда под него собран контекст.</p>
     <div class="cxtrend rv">
       <div class="cxtl"><span><b>2023</b> — учили промпты</span><span><b>2025</b> — формулировка перестала быть главным</span><span><b>2026</b> — год контекста</span></div>
       <p class="cxnote">Умение писать промпты выросло в управление контекстом и стало отдельной специальностью. Спрос сместился от простого чат-бота к управляемым системам с контролем.</p>
@@ -715,40 +715,6 @@ h1,h2,h3,.pullline{text-wrap:balance}
   size();if(reduce){draw(false);}else{loop();}
   var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){cancelAnimationFrame(raf);size();if(reduce){draw(false);}else{loop();}},180)});
 })();
-</script>
-
-<script>
-  var ASA_PRESETS={
-    blog:{example:"Написать сценарий Reels про мой продукт для холодной аудитории",persona:"опытный сценарист коротких видео",role:"написать цепляющий сценарий Reels",method:"хук в первые 3 секунды, польза, призыв к действию",params:"до 150 слов, разговорный язык, с раскадровкой",tone:"живой, без пафоса"},
-    law:{example:"Проверить договор аренды на скрытые риски",persona:"юрист по договорному праву",role:"найти риски и слабые пункты договора",method:"по каждому риску: чем опасно и как исправить, с основанием",params:"таблица: пункт, риск, правка",tone:"сухой и точный"},
-    biz:{example:"Собрать воронку продаж для моего онлайн-курса",persona:"маркетолог-стратег",role:"собрать воронку продаж и офферы",method:"путь клиента от касания до оплаты по AIDA",params:"этапы, тексты, точки касания",tone:"деловой"},
-    dev:{example:"Проверить мой .env и код на утечки секретов",persona:"инженер по безопасности приложений",role:"найти утечки, ключи и дыры",method:"сканировать секреты и оценить риск каждого",params:"список находок с приоритетом",tone:"по делу"},
-    _def:{persona:"эксперт в теме запроса",role:"выполнить задачу как профессионал",method:"разложить по шагам и взять проверенную схему",params:"готовый к использованию формат, без воды",tone:"по делу"}
-  };
-  var ASA_CUR=null;
-  function fillTask(btn,r){
-    ASA_CUR=r;
-    var ta=document.getElementById('taskIn'); if(ta){ta.value=ASA_PRESETS[r].example;}
-    var chips=document.querySelectorAll('.rp-chip');
-    for(var i=0;i<chips.length;i++){chips[i].classList.remove('on');}
-    if(btn){btn.classList.add('on');}
-  }
-  function asaEsc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-  function buildPrompt(){
-    var out=document.getElementById('rpOut');
-    var t=((document.getElementById('taskIn')||{}).value||'').trim();
-    if(!t){out.innerHTML='Напиши задачу в поле выше и нажми «Собрать промпт».';return;}
-    var p=ASA_PRESETS[ASA_CUR]||ASA_PRESETS._def;
-    function L(k){return '<span class="pl">'+k+':</span> ';}
-    out.innerHTML=
-      L('Persona')+asaEsc(p.persona)+'\n'+
-      L('Role')+asaEsc(p.role)+'\n'+
-      L('Objective')+asaEsc(t)+'\n'+
-      L('Method')+asaEsc(p.method)+'\n'+
-      L('Parameters')+asaEsc(p.params)+'\n'+
-      L('Tone')+asaEsc(p.tone)+'\n'+
-      L('Verify')+'перед ответом проверь факты и убери пустословие.';
-  }
 </script>
 
 </body>
