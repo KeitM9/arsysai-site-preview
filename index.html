@@ -225,6 +225,10 @@ h1,h2,h3,.pullline{text-wrap:balance}
 .def{text-align:center}
 .def .short,.pullline{border-left:none;border-top:3px solid var(--green);padding:16px 0 0}
 .pillar{text-align:center}
+/* контентные секции ниже кольца — текст по левому краю, без «пирамид» */
+#proof,#process,#formats,#about,#faq,#cta{text-align:left}
+#proof>.wrap>*,#process>.wrap>*,#formats>.wrap>*,#about>.wrap>*,#faq>.wrap>*,#cta>.wrap>*{margin-left:0!important;margin-right:0!important}
+#proof .lead,#process .lead,#formats .lead,#about .lead,#about .body,#faq .q,#faq .a,#cta .lead,#formats .afterreq,#cta .afterreq,#proof .prooftypes{margin-left:0!important;margin-right:0!important;max-width:74ch;text-align:left;text-wrap:pretty}
 /* раздел «Что изменилось» — компактнее, заголовок зелёный */
 #what{padding-bottom:20px}
 #ladder{padding-top:22px}
@@ -616,27 +620,6 @@ h1,h2,h3,.pullline{text-wrap:balance}
     <div class="midcta rv">
       <p>Начни с бесплатных материалов — готовые наборы промптов под разные задачи.</p>
       <a href="https://t.me/arsysai_bot" target="_blank" rel="noopener" class="btn btn-green">Забрать материал</a>
-    </div>
-  </div>
-</section>
-
-<!-- МАРШРУТЫ -->
-<section class="sec mist" id="routes">
-  <div class="wrap">
-    <div class="rv" style="max-width:760px;margin:0 auto">
-      <span class="kick">Решения</span>
-      <h2>Выбери задачу — система подберётся под неё</h2>
-      <p class="lead" style="margin:14px auto 0">Войти можно с любой точки. Достаточно выбрать свою задачу — покажу подходящий вход.</p>
-    </div>
-    <div class="routes rv">
-      <a class="route" href="https://t.me/auditarsysai_bot" target="_blank" rel="noopener"><div class="rt">Понять, что внедрять</div><div class="rd">Где AI даст эффект, а где риск. Начни с диагностики. Решения: Аудит, PROMPT MASTER.</div><div class="rgo">Начать с аудита →</div></a>
-      <a class="route" href="prompt-master.html"><div class="rt">Научиться управлять AI</div><div class="rd">Команда получает разные результаты. Нужен единый метод. Решения: PROMPT MASTER, APP.</div><div class="rgo">Изучить метод →</div></a>
-      <a class="route" href="https://app.arsysai.com" target="_blank" rel="noopener"><div class="rt">Быстро получить рабочий промпт</div><div class="rd">Описываешь задачу словами — получаешь готовую инструкцию за минуту. Решение: APP.</div><div class="rgo">Попробовать приложение →</div></a>
-      <a class="route" href="projects.html"><div class="rt">Автоматизировать отдел</div><div class="rd">Команда агентов под функции бизнеса. Решения: AI Агенты, Аудит.</div><div class="rgo">Собрать AI-команду →</div></a>
-      <a class="route" href="projects.html"><div class="rt">Личный AI-ассистент</div><div class="rd">Задачи, память, план дня, проекты в одном контуре. Решение: Assistant.</div><div class="rgo">Настроить помощника →</div></a>
-      <a class="route" href="projects.html"><div class="rt">Контент и продажи</div><div class="rd">Ниша и экспертность превращаются в воронку к заявке. Решения: Контент Воронка, APP.</div><div class="rgo">Собрать воронку →</div></a>
-      <a class="route" href="https://t.me/auditarsysai_bot" target="_blank" rel="noopener"><div class="rt">Проверить решение</div><div class="rd">Договор, сайт, текст, промпт или AI-агента на риски. Решение: Аудит.</div><div class="rgo">Запустить проверку →</div></a>
-      <a class="route" href="https://t.me/arsysai_bot" target="_blank" rel="noopener"><div class="rt">Пока не знаю, с чего начать</div><div class="rd">Забери бесплатные материалы в боте — с них проще начать.</div><div class="rgo">Забрать бесплатные материалы →</div></a>
     </div>
   </div>
 </section>
