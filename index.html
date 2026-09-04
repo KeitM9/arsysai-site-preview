@@ -351,6 +351,18 @@ h1,h2,h3,.pullline{text-wrap:balance}
 #why{padding-top:34px;padding-bottom:26px}
 #why .newsitem{margin-top:18px;padding:24px 28px}
 #why .lead{margin-top:12px}
+/* мини-лента новостей рынка — ведёт к тому, чем занимается ASA */
+.newsmore{max-width:1000px;margin:36px auto 0;text-align:left}
+.newsmore .mlabel2{font-family:var(--disp);font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:16px}
+.newsgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.newscard{display:flex;flex-direction:column;text-align:left;border:1px solid var(--dark-3);background:rgba(255,255,255,.02);border-radius:var(--r);padding:22px;transition:border-color .2s,transform .2s}
+.newscard:hover{border-color:var(--green);transform:translateY(-3px)}
+.newscard .nctag{font-family:var(--disp);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+.newscard p{color:#cfd5de;font-size:14.5px;line-height:1.5;margin-bottom:12px}
+.newscard .ncsrc{font-size:12px;color:var(--muted-d);margin-top:auto;margin-bottom:12px}
+.newscard .ncgo{font-family:var(--disp);font-size:13px;font-weight:600;letter-spacing:.02em;color:var(--green);display:inline-flex;gap:6px;transition:gap .2s}
+.newscard:hover .ncgo{gap:10px}
+@media(max-width:860px){.newsgrid{grid-template-columns:1fr}.newsmore{text-align:center}.newscard{text-align:center}.newscard .ncsrc{margin-top:8px}}
 /* метод — только буквы в ряд (значок + подпись), читается PROMPT */
 .pm{white-space:nowrap}
 .gr{color:var(--green)}
@@ -535,6 +547,30 @@ h1,h2,h3,.pullline{text-wrap:balance}
         <p style="margin-top:16px;font-size:13px;color:var(--muted-d)">Источники: Tech Startups (4 сент) · LLM-Stats</p>
       </div>
     </article>
+
+    <div class="newsmore rv">
+      <div class="mlabel2">Ещё из мира AI · сентябрь</div>
+      <div class="newsgrid">
+        <a class="newscard" href="agents.html">
+          <div class="nctag">Рынок агентов</div>
+          <p>Малый бизнес впервые обгоняет крупный по скорости внедрения AI-агентов. Рынок агентов вырос с $7,6 млрд в 2025 до ~$10,8 млрд в 2026 — люди переходят от проб к рабочим процессам.</p>
+          <div class="ncsrc">Panto AI · Taylance</div>
+          <span class="ncgo">Как собрать AI-команду →</span>
+        </a>
+        <a class="newscard" href="#formats">
+          <div class="nctag">Спрос</div>
+          <p>«Собери мне систему под задачу» стало строкой бюджета: за сборку сценария-автоматизации платят $1 500–5 000, за сопровождение — $2 000–15 000 в месяц.</p>
+          <div class="ncsrc">Taskip · Humming Agent</div>
+          <span class="ncgo">Форматы работы →</span>
+        </a>
+        <a class="newscard" href="https://audit.arsysai.com/" target="_blank" rel="noopener">
+          <div class="nctag">Что важно</div>
+          <p>Разрыв между «поставил» и «работает»: 79% компаний внедрили агентов, а в деле их крутят 11%. Там, где перед запуском есть проверка, откатов в 5 раз меньше — 9% против 47%.</p>
+          <div class="ncsrc">Prefactor · Azumo · Digital Applied</div>
+          <span class="ncgo">Проверка перед запуском →</span>
+        </a>
+      </div>
+    </div>
 
   </div>
 </section>
