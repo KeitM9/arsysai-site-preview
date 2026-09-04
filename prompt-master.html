@@ -4,11 +4,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PROMPT MASTER — метод управления AI | Architect Systems AI</title>
-<meta name="description" content="PROMPT MASTER — метод управления AI. Изучаешь принцип один раз и управляешь любой моделью на уровне инженера. Вход — Протокол $14: AI отвечает по делу с первой попытки.">
+<meta name="description" content="PROMPT MASTER — авторский метод управления AI. Изучаешь принцип один раз и управляешь любой моделью на уровне инженера. Вход — Протокол $14. Тарифы: Протокол · APP · PRO · MASTER.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+  /* ——— страница PROMPT MASTER — блоки поверх дизайн-системы ——— */
+  .pull-news{border-left:3px solid var(--green);padding:8px 0 8px 24px;margin-top:10px;font-size:clamp(20px,2.2vw,28px);font-weight:700;line-height:1.3;color:#eef1f4;max-width:24ch}
+  .pull-news b{color:var(--green)}
+  /* три вопроса */
+  .qgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px;counter-reset:q}
+  .qcard{background:var(--white);border:1px solid #e7e9ea;border-radius:var(--radius);padding:30px 28px}
+  .qcard .qn{counter-increment:q;font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-ink);margin-bottom:14px;display:flex;align-items:baseline;gap:10px}
+  .qcard .qn::before{content:"0" counter(q);font-size:24px;font-weight:700}
+  .qcard h3{margin-bottom:10px;font-size:20px}
+  .qcard p{font-size:15px;color:var(--muted);line-height:1.55}
+  @media(max-width:820px){.qgrid{grid-template-columns:1fr}}
+  /* метод MASTER */
+  .mstrip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:40px}
+  .mcell{background:var(--dark-2);border:1px solid var(--dark-3);border-radius:var(--radius-s);padding:20px 16px}
+  .mcell .ml{font-family:'Oswald',sans-serif;font-size:30px;font-weight:700;color:var(--green);line-height:1}
+  .mcell .mw{font-weight:700;color:#fff;margin-top:8px;font-size:15px}
+  .mcell .mm{font-size:12.5px;color:var(--muted-d);line-height:1.4;margin-top:4px}
+  @media(max-width:820px){.mstrip{grid-template-columns:repeat(2,1fr)}}
+  /* привычки → сдвиг */
+  .myths{margin-top:40px;display:flex;flex-direction:column}
+  .myth{display:grid;grid-template-columns:44px 1fr 1.25fr;gap:26px;padding:24px 0;border-top:1px solid #e7e9ea;align-items:start}
+  .myth:last-child{border-bottom:1px solid #e7e9ea}
+  .myth .mnum{font-family:'Oswald',sans-serif;color:var(--muted);font-weight:700;font-size:16px}
+  .myth .mclaim{color:var(--muted);font-size:16px;line-height:1.45}
+  .myth .mtruth{color:var(--dark);font-size:17px;font-weight:600;line-height:1.45}
+  .myth .mtruth b{color:var(--green-ink)}
+  @media(max-width:760px){.myth{grid-template-columns:1fr;gap:8px}}
+  /* ниши */
+  .nichegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px}
+  .niche{background:var(--white);border:1px solid #e7e9ea;border-radius:var(--radius-s);padding:20px}
+  .niche .np{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--green-ink);font-weight:700;margin-bottom:8px}
+  .niche .nr{font-size:13.5px;color:var(--muted);line-height:1.5}
+  @media(max-width:900px){.nichegrid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.nichegrid{grid-template-columns:1fr}}
+  /* файлы системы (на тёмном) */
+  .files{margin-top:44px;display:flex;flex-direction:column}
+  .file{padding:22px 0;border-top:1px solid rgba(255,255,255,.1)}
+  .file:last-child{border-bottom:1px solid rgba(255,255,255,.1)}
+  .file .ft{font-size:12px;font-family:'Oswald',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:4px}
+  .file h4{color:#fff;font-size:18px;margin-bottom:6px}
+  .file p{font-size:14.5px;color:#ccd2db;line-height:1.55;max-width:82ch}
+  /* тарифы — чек-лист */
+  .tlist{list-style:none;display:flex;flex-direction:column;gap:9px;margin:14px 0 18px;flex:1}
+  .tlist li{position:relative;padding-left:24px;font-size:13.5px;line-height:1.45;color:var(--muted)}
+  .tlist li.y::before{content:"✓";position:absolute;left:0;color:var(--green-ink);font-weight:800}
+  .tlist li.n{color:#b9bdbf}
+  .tlist li.n::before{content:"–";position:absolute;left:0;color:#b9bdbf;font-weight:800}
+  .tmore{font-size:13px;font-weight:700;color:var(--green-ink);display:inline-flex;gap:6px;margin:-6px 0 14px}
+  /* фильтр «кому не подходит» */
+  .filtergrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:44px}
+  .fcard{background:var(--white);border:1px solid #e7e9ea;border-radius:var(--radius);padding:28px 26px}
+  .fcard .fh{font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--dark);font-weight:700;margin-bottom:12px}
+  .fcard p{font-size:15px;color:var(--muted);line-height:1.55}
+  .fcard a{color:var(--green-ink);font-weight:700}
+  @media(max-width:820px){.filtergrid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 
@@ -18,7 +75,8 @@
     <a href="index.html" class="brand"><span class="dot"></span>Architect Systems AI</a>
     <nav class="nav-links">
       <a href="index.html#how">Экосистема</a>
-      <a href="#how">Как работает</a>
+      <a href="#method">Метод</a>
+      <a href="#files">Что внутри</a>
       <a href="#tiers">Тарифы</a>
       <a href="#faq">Вопросы</a>
     </nav>
@@ -32,68 +90,121 @@
   <div class="wrap rv">
     <div class="crumb"><a href="index.html" class="on-dark-c">Экосистема</a> <span>/</span> <span style="color:#fff">PROMPT MASTER</span></div>
     <div class="kicker">Фундамент системы <span class="sep">·</span> Точка входа</div>
-    <h1>PROMPT MASTER — метод управления&nbsp;<em>AI</em>.</h1>
-    <p class="lead">Авторская система промпт-инженерии. Изучаешь принцип один раз — и управляешь любой моделью на уровне инженера, а не пользователя. Отсюда вырастает вся экосистема Architect Systems AI.</p>
+    <h1>Управляй любой нейросетью — на уровне&nbsp;<em>инженера</em>.</h1>
+    <p class="lead">Авторский метод <span class="pm">MASTER</span> и готовый Протокол. Изучаешь принцип один раз — и Claude, ChatGPT, Gemini, Grok, DeepSeek отвечают точно с первой попытки. Отсюда вырастает вся система Architect Systems AI.</p>
 
     <div class="offer">
-      <div class="o"><div class="lbl">Результат</div><p>AI отвечает по делу с первой попытки: без выдумок, пустословия и лишних правок.</p></div>
+      <div class="o"><div class="lbl">Результат</div><p>AI отвечает по делу с первой попытки: без выдумок и лишних правок.</p></div>
       <div class="o"><div class="lbl">Скорость</div><p>Вставил метапромпт-ядро один раз — модель работает по твоим правилам весь диалог.</p></div>
       <div class="o"><div class="lbl">Лёгкость</div><p>Готовые протоколы и шаблоны. Меняешь данные под задачу — получаешь рабочий запрос.</p></div>
     </div>
 
     <div class="backmap"><div class="row">
       <a href="https://pu.arsysai.com/" target="_blank" rel="noopener" class="btn btn-primary">Начать с Протокола — $14</a>
-      <a href="#how" class="btn btn-ghost">Как это работает</a>
+      <a href="#tiers" class="btn btn-ghost">Смотреть тарифы</a>
     </div></div>
   </div>
 </section>
 
-<!-- КОМУ -->
-<section class="sec">
+<!-- НОВОСТНОЙ ХУК -->
+<section class="sec dark" style="padding-top:20px">
   <div class="wrap">
-    <div class="rv" style="max-width:720px">
-      <span class="eyebrow">Кому это</span>
-      <h2>Любому, кто работает с AI на&nbsp;результат.</h2>
-      <p class="lead">Метод универсален и работает в любой нише. Один и тот же фреймворк собирает запрос под задачу — от проверки договора до сценария видео.</p>
-    </div>
-    <div class="tri">
-      <div class="vcard rv"><h3>Эксперты и специалисты</h3><p>Адвокат проверяет договор, бухгалтер ищет налоговые риски, маркетолог собирает воронку — один метод под каждую задачу.</p></div>
-      <div class="vcard rv"><h3>Блогеры и авторы</h3><p>Сценарий Reels, карусель, текст поста, YouTube-сценарий — модель держит роль, тон и формат, а не выдаёт «в среднем».</p></div>
-      <div class="vcard rv"><h3>Предприниматели и разработчики</h3><p>Запуск оффера, код без заглушек, автоматизация — управляемая система вместо случайного результата.</p></div>
+    <div class="rv" style="max-width:820px">
+      <span class="eyebrow">Почему именно сейчас</span>
+      <h2>За одну неделю выходит семь новых&nbsp;AI.</h2>
+      <p class="lead" style="margin-top:16px">Модели сменяют друг друга каждую неделю: GPT-6, обновления Google и Anthropic — гонка ускоряется. Догонять каждую новинку бесполезно. Спокойнее тем, кто владеет методом: он один и работает в любой модели — сегодняшней и будущей.</p>
+      <p class="pull-news rv">Меняются модели — <b>метод остаётся</b>.</p>
     </div>
   </div>
 </section>
 
-<!-- КАК РАБОТАЕТ -->
-<section class="sec mist" id="how">
+<!-- ТРИ ВОПРОСА -->
+<section class="sec">
   <div class="wrap">
     <div class="rv" style="max-width:720px">
-      <span class="eyebrow">Как работает</span>
-      <h2>Метод MASTER — инженерная формула из шести&nbsp;слоёв.</h2>
-      <p class="lead">Само название — это фреймворк. Собираешь запрос по слоям, и модель понимает не только что сделать, но и как именно.</p>
+      <span class="eyebrow">Что тебе даёт метод</span>
+      <h2>Увидеть → понять → решить.</h2>
+      <p class="lead">Три шага, которые проходит каждый, кто освоил <span class="pm">PROMPT&nbsp;<span class="gr">MASTER</span></span>.</p>
     </div>
-    <div class="how">
-      <div class="step rv"><div class="n"></div><div><h3>Persona · кто пишет</h3><p>Задаёшь модели экспертный бэкграунд — уровень, с которого она отвечает.</p></div></div>
-      <div class="step rv"><div class="n"></div><div><h3>Role · что делает сейчас</h3><p>Конкретная функция в этой задаче: редактор, аналитик, стратег.</p></div></div>
-      <div class="step rv"><div class="n"></div><div><h3>Objective · какой итог</h3><p>Измеримый результат, к которому модель ведёт ответ.</p></div></div>
-      <div class="step rv"><div class="n"></div><div><h3>Method · по какой схеме</h3><p>Рабочая структура — AIDA, SWOT, пирамида Минто и другие.</p></div></div>
-      <div class="step rv"><div class="n"></div><div><h3>Parameters · в каких рамках</h3><p>Формат, объём и запреты — что можно, а что модель делать не должна.</p></div></div>
-      <div class="step rv"><div class="n"></div><div><h3>Tone · как звучит</h3><p>Эмоциональный окрас ответа под аудиторию и канал.</p></div></div>
+    <div class="qgrid rv">
+      <div class="qcard">
+        <div class="qn">Увидишь</div>
+        <h3>Из чего собран запрос</h3>
+        <p>Увидишь, из чего складывается запрос к AI и почему модель отвечает именно так. Узнаешь метод MASTER — шесть слоёв, из которых строится любой точный промпт.</p>
+      </div>
+      <div class="qcard">
+        <div class="qn">Поймёшь</div>
+        <h3>Результат решает управление</h3>
+        <p>Поймёшь: результат решает не модель, а то, что ты ей даёшь. Одна и та же нейросеть отвечает по-разному — вся разница в инструкции.</p>
+      </div>
+      <div class="qcard">
+        <div class="qn">Решишь</div>
+        <h3>Управляешь под свою задачу</h3>
+        <p>Сможешь управлять любой моделью под свою задачу — сегодняшней и будущей. Собираешь промпт сам, без поиска «готовых промптов для профессии».</p>
+      </div>
     </div>
-    <p class="body rv" style="max-width:70ch">Метод работает в любой нейросети — текущей и будущей. Меняются модели — <em>метод остаётся</em>. Носитель метода — Инженерный Справочник PROMPT MASTER, фундамент всей системы.</p>
+  </div>
+</section>
+
+<!-- 00 ОПРЕДЕЛЕНИЕ -->
+<section class="sec mist" id="about">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="eyebrow">Что это</span>
+      <h2>Система управления AI-моделями.</h2>
+      <p class="lead">Авторская методология: объясняет не только что написать нейросети, но и почему это работает. Внутри — инженерный фундамент, инструмент мгновенного применения и готовые конфигурации под любую задачу.</p>
+      <p class="body" style="max-width:70ch">Изучаешь один раз — работаешь с любым AI на уровне инженера. Вместо сотен случайных запросов — понятная структура: точные результаты быстрее, меньше правок. Подходит для контента, анализа, бизнеса, обучения и автоматизации. Носитель метода — <em>Инженерный Справочник PROMPT MASTER</em>, фундамент всей системы.</p>
+    </div>
+  </div>
+</section>
+
+<!-- МЕТОД MASTER -->
+<section class="sec dark" id="method">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="eyebrow">Метод</span>
+      <h2>MASTER — инженерная формула из шести&nbsp;слоёв.</h2>
+      <p class="lead" style="margin-top:14px">Само название — это фреймворк. Собираешь запрос по слоям, и модель понимает не только что сделать, но и как именно. Работает в любой нейросети.</p>
+    </div>
+    <div class="mstrip rv">
+      <div class="mcell"><div class="ml">P</div><div class="mw">Persona</div><div class="mm">экспертный бэкграунд</div></div>
+      <div class="mcell"><div class="ml">R</div><div class="mw">Role</div><div class="mm">функция здесь и сейчас</div></div>
+      <div class="mcell"><div class="ml">O</div><div class="mw">Objective</div><div class="mm">измеримый результат</div></div>
+      <div class="mcell"><div class="ml">M</div><div class="mw">Method</div><div class="mm">схема: AIDA · SWOT · Минто</div></div>
+      <div class="mcell"><div class="ml">P</div><div class="mw">Parameters</div><div class="mm">формат и рамки</div></div>
+      <div class="mcell"><div class="ml">T</div><div class="mw">Tone</div><div class="mm">эмоциональный окрас</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРИВЫЧКИ → СДВИГ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="rv" style="max-width:720px">
+      <span class="eyebrow">Что стоит заметить</span>
+      <h2>Что держит на уровне «вопрос — ответ».</h2>
+      <p class="lead">Четыре привычки. Каждая снимает один потолок и открывает следующий уровень работы с AI.</p>
+    </div>
+    <div class="myths rv">
+      <div class="myth"><div class="mnum">01</div><div class="mclaim">«Чем длиннее промпт — тем лучше результат»</div><div class="mtruth">Сила запроса — в структуре. <b>Шесть точных слоёв MASTER</b> работают лучше двух страниц текста.</div></div>
+      <div class="myth"><div class="mnum">02</div><div class="mclaim">«Нужно учить промпты под каждую нейросеть»</div><div class="mtruth">Метод <b>универсален</b>. Меняются модели — фреймворк остаётся.</div></div>
+      <div class="myth"><div class="mnum">03</div><div class="mclaim">«AI поймёт по контексту сам»</div><div class="mtruth">Нейросеть читает <b>инструкции</b>. Чем яснее картина — тем точнее ответ.</div></div>
+      <div class="myth"><div class="mnum">04</div><div class="mclaim">«Промпты — только для разработчиков»</div><div class="mtruth">Метод собирает запрос для адвоката, бухгалтера, блогера, ютубера — <b>для любой ниши</b>.</div></div>
+    </div>
   </div>
 </section>
 
 <!-- БЫЛО → СТАЛО -->
-<section class="sec" id="change">
+<section class="sec mist">
   <div class="wrap">
     <div class="rv" style="max-width:720px">
       <span class="eyebrow">Что меняется</span>
-      <h2>Было → Стало.</h2>
+      <h2>До метода и после.</h2>
+      <p class="lead">Меняется не AI. Меняешься ты — и через тебя меняется результат.</p>
     </div>
     <div class="split rv">
       <div class="pane pane-old">
-        <div class="tag">Было</div>
+        <div class="tag">До</div>
         <h3>Запрос наугад</h3>
         <ul>
           <li>Пишешь как придётся — результат как повезёт</li>
@@ -103,58 +214,158 @@
         </ul>
       </div>
       <div class="pane pane-new">
-        <div class="tag">Стало</div>
-        <h3>Метод MASTER</h3>
+        <div class="tag">После</div>
+        <h3>Инженерная сборка</h3>
         <ul>
-          <li>Собираешь запрос по слоям — результат стабильный</li>
+          <li>Собираешь запрос по шести слоям MASTER</li>
           <li>Точный ответ с первой попытки</li>
           <li>Один метод — под любую задачу и нишу</li>
-          <li>Работает в любой модели, текущей и будущей</li>
+          <li>Любая модель, текущая и будущая</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ТАРИФЫ -->
-<section class="sec mist" id="tiers">
+<!-- КОМУ ЭТО -->
+<section class="sec" id="who">
   <div class="wrap">
     <div class="rv" style="max-width:720px">
+      <span class="eyebrow">Кому это</span>
+      <h2>Один метод — любая ниша.</h2>
+      <p class="lead">Один и тот же фреймворк собирает запрос под задачу — от проверки договора до сценария видео.</p>
+    </div>
+    <div class="nichegrid rv">
+      <div class="niche"><div class="np">Адвокат</div><div class="nr">Разбор договора на скрытые риски за 5 минут, со ссылками на статьи.</div></div>
+      <div class="niche"><div class="np">Бухгалтер</div><div class="nr">Поиск налоговых рисков и готовый комментарий клиенту.</div></div>
+      <div class="niche"><div class="np">Маркетолог</div><div class="nr">Воронка под аудиторию: оффер, лестница, контент-план — за вечер.</div></div>
+      <div class="niche"><div class="np">Блогер</div><div class="nr">Сценарии Reels и Stories в твоём голосе, контент-план на месяц.</div></div>
+      <div class="niche"><div class="np">Ютубер</div><div class="nr">Сценарий 15-минутного видео с раскадровкой и метками за 30 минут.</div></div>
+      <div class="niche"><div class="np">Эксперт</div><div class="nr">Упаковка методологии в посты, статьи и лендинги — голос живой.</div></div>
+      <div class="niche"><div class="np">Предприниматель</div><div class="nr">Разбор ниши, конкурентов и точек роста, план запуска оффера.</div></div>
+      <div class="niche"><div class="np">Разработчик</div><div class="nr">Код с верификацией — AI отвечает по делу, без заглушек.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ФАЙЛЫ СИСТЕМЫ -->
+<section class="sec dark" id="files">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
+      <span class="eyebrow">05 · Файлы системы</span>
+      <h2>Что входит в PROMPT MASTER.</h2>
+      <p class="lead" style="margin-top:14px">Каждый файл решает конкретную задачу. Ниже — из чего собрана система; что именно открывается, зависит от тарифа.</p>
+    </div>
+    <div class="files rv">
+      <div class="file"><div class="ft">Навигатор · все тарифы</div><h4>СТАРТ</h4><p>Файл для новичка — с чего начать за первые 15 минут: открыть справочник → взять реальную задачу → применить шаблон → добавить верификатор → запустить APP. Плюс история Екатерины: как появился метод. Точка входа, чтобы первые шаги не были хаотичными.</p></div>
+      <div class="file"><div class="ft">Фундамент · PRO и MASTER</div><h4>Инженерный Справочник PM 2026</h4><p>Главная книга системы: как устроен AI изнутри и почему большинство получают слабые результаты. Метод MASTER, 25 инженерных ключей, техника Humanizer, рекурсия качества, психология хуков, монетизация. Настольная книга — держать открытой в работе.</p></div>
+      <div class="file"><div class="ft">Практика · PRO и MASTER</div><h4>50 инженерных шаблонов</h4><p>Готовые промпты по 6 нишам: блогеры, маркетологи, ютуберы, видеорежиссёры (VEO 3 / Midjourney), продавцы, рост подписчиков. Меняешь [скобки] под себя — роль, метод и тон уже зашиты. Работает в ChatGPT, Claude, Gemini.</p></div>
+      <div class="file"><div class="ft">Качество · PRO и MASTER</div><h4>Верификаторы Мастера</h4><p>25 экспертных ролей + 25 верификаторов качества. Роль в начало промпта — модель мыслит как нужный специалист; верификатор в конец — AI сам находит слабые места и переписывает лучше. Разница в качестве до +40%.</p></div>
+      <div class="file"><div class="ft">Продажи · PRO и MASTER</div><h4>Формулы для продаж</h4><p>10 готовых промптов на весь цикл: оффер, КП, email-цепочка, лендинг, УТП, работа с возражениями, посты, анализ аудитории, Telegram-воронка. Вставляешь свои данные — получаешь рабочую систему.</p></div>
+      <div class="file"><div class="ft">Ассистент · PRO и MASTER</div><h4>GPT-ассистент PROMPT MASTER</h4><p>Настроенный ассистент: описываешь задачу — он строит промпт с ролью и параметрами. Работает по ссылке, без обучения.</p></div>
+      <div class="file"><div class="ft">Инструмент · APP и MASTER</div><h4>PROMPT MASTER APP на Claude</h4><p>Приложение: описываешь задачу словами — команда из 8 агентов собирает готовый промпт. 6 режимов, с любого браузера, без VPN. <a href="app.html" style="color:var(--green);font-weight:700">Подробнее об APP →</a></p></div>
+      <div class="file"><div class="ft">Только MASTER</div><h4>Арсенал Мастера</h4><p>41 инженерный промпт по 5 нишам, 2 системных модуля (виральность + анти-робот) и 6 аудит-протоколов: промпт, воронка, Telegram, Instagram, TikTok, digital-продукт.</p></div>
+      <div class="file"><div class="ft">🎁 Подарок · MASTER</div><h4>AUDIT-промпты</h4><p>Бонус тарифа MASTER: криминалистический аудит (где сломан промпт), вскрытие ответа AI (почему результат слабый), апгрейд запроса до профессиональной AI-системы.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ТАРИФЫ -->
+<section class="sec" id="tiers">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px">
       <span class="eyebrow">Тарифы</span>
       <h2>Четыре уровня доступа.</h2>
-      <p class="lead">Каждый отвечает на свою задачу. Вход — Протокол за $14: за пять минут видно, что значит инженерный подход к AI.</p>
+      <p class="lead">Разовая оплата, доступ навсегда. Любая карта — USD, EUR, RUB. Из любой точки мира без VPN. Обновления бесплатно. Вход — Протокол за $14.</p>
     </div>
     <div class="tiers">
-      <div class="tier feat rv">
+      <div class="tier rv">
         <div class="tn">Вход в систему</div>
         <div class="tp">$14</div>
         <div class="flag">🎁 каждый 50-й — APP в подарок</div>
-        <div class="td"><strong>Протокол управления AI.</strong> Метапромпт-ядро, анти-петлевой протокол на 25 правил против слива токенов, 25 стратегий против уклонения, QA-шаблон проверки фактов. Реальная ценность $50–100+.</div>
+        <ul class="tlist">
+          <li class="y">Метапромпт-ядро</li>
+          <li class="y">Анти-петлевой протокол · 25 правил</li>
+          <li class="y">25 стратегий против уклонения</li>
+          <li class="y">QA-шаблон проверки фактов</li>
+          <li class="n">Приложение APP</li>
+          <li class="n">Инженерный Справочник и шаблоны</li>
+        </ul>
         <a href="https://pu.arsysai.com/" target="_blank" rel="noopener" class="btn btn-green" style="width:100%;justify-content:center">Взять Протокол</a>
       </div>
+
       <div class="tier rv">
         <div class="tn">Уровень 1 · Скорость</div>
         <div class="tp">$99</div>
         <div class="flag">🎁 каждый 50-й — PRO в подарок</div>
-        <div class="td"><strong>APP.</strong> Приложение на базе Claude, 6 режимов генерации, инструкция и партнёрская программа 25%. Результат сейчас, без погружения в теорию.</div>
-        <a href="app.html" class="btn btn-ghost" style="width:100%;justify-content:center">Про APP</a>
+        <ul class="tlist">
+          <li class="y">Приложение на базе Claude</li>
+          <li class="y">6 режимов, 8 агентов внутри</li>
+          <li class="y">История запросов, без VPN</li>
+          <li class="y">Партнёрская программа 25%</li>
+          <li class="n">Инженерный Справочник</li>
+          <li class="n">50 шаблонов и Арсенал</li>
+        </ul>
+        <a class="tmore" href="app.html">Подробнее об APP →</a>
+        <a href="https://t.me/prmasterapp_bot" target="_blank" rel="noopener" class="btn btn-green" style="width:100%;justify-content:center">Открыть APP</a>
       </div>
+
       <div class="tier rv">
         <div class="tn">Уровень 2 · Понимание</div>
         <div class="tp">$148</div>
         <div class="flag">🎁 каждый 50-й — MASTER в подарок</div>
-        <div class="td"><strong>PRO.</strong> Метод целиком: Инженерный Справочник, 50 шаблонов, верификаторы, формулы продаж, GPT-ассистент. Независимость от инструмента.</div>
-        <a href="https://t.me/protmaster_bot?start=pro" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center">Взять PRO</a>
+        <ul class="tlist">
+          <li class="y">Инженерный Справочник PM 2026</li>
+          <li class="y">25 инженерных ключей</li>
+          <li class="y">25 ключей креативности <span style="color:var(--green-ink);font-weight:700">(с 01.09.2026 — только в PRO)</span></li>
+          <li class="y">50 шаблонов · Верификаторы Мастера</li>
+          <li class="y">GPT-ассистент · Формулы продаж</li>
+          <li class="n">Арсенал Мастера и APP на Claude</li>
+        </ul>
+        <a href="https://t.me/protmaster_bot?start=pro" target="_blank" rel="noopener" class="btn btn-green" style="width:100%;justify-content:center">Взять PRO</a>
       </div>
-      <div class="tier rv">
+
+      <div class="tier feat rv">
         <div class="tn">Уровень 3 · Полнота</div>
         <div class="tp">$229</div>
-        <div class="flag">приоритетная поддержка</div>
-        <div class="td"><strong>MASTER.</strong> Всё из PRO + приложение на Claude + Арсенал Мастера + бонус-аудит + партнёрка 25%. Фундамент, инструменты и доход с первого дня.</div>
-        <a href="https://t.me/protmaster_bot?start=master" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center">Взять MASTER</a>
+        <div class="flag">максимум системы · приоритетная поддержка</div>
+        <ul class="tlist">
+          <li class="y">Всё из PRO целиком</li>
+          <li class="y">PROMPT MASTER App на Claude</li>
+          <li class="y">Арсенал Мастера: 41 промпт + 6 аудит-протоколов</li>
+          <li class="y">🎁 Подарок — AUDIT-промпты</li>
+          <li class="y">Партнёрская программа 25%</li>
+          <li class="y">Приоритетная поддержка в боте</li>
+        </ul>
+        <a href="https://t.me/protmaster_bot?start=master" target="_blank" rel="noopener" class="btn btn-green" style="width:100%;justify-content:center">Взять MASTER</a>
       </div>
     </div>
-    <p class="body rv" style="margin-top:28px">Доступ навсегда, разовая оплата · работает из любой точки мира без VPN · любая карта (USD / EUR / RUB) · обновления бесплатно. Поддержка после оплаты — <strong>@protmaster_bot</strong>.</p>
+    <p class="body rv" style="margin-top:24px">Поддержка и обновления после оплаты — <strong>@protmaster_bot</strong>. Каждый 50-й покупатель любого тарифа получает следующий уровень в подарок.</p>
+  </div>
+</section>
+
+<!-- ФИЛЬТР -->
+<section class="sec mist">
+  <div class="wrap">
+    <div class="rv" style="max-width:720px">
+      <span class="eyebrow">Честно, до покупки</span>
+      <h2>Кому PROMPT MASTER пока не нужен.</h2>
+      <p class="lead">Метод сильный, но подходит не всем и не всегда. Три ситуации, когда лучше подождать или выбрать другой вход.</p>
+    </div>
+    <div class="filtergrid rv">
+      <div class="fcard">
+        <div class="fh">Не покупай, если</div>
+        <p>Ищешь «волшебную кнопку», где ничего не нужно делать самому. Метод даёт готовую схему, но запрос ты собираешь сам — это навык, а не таблетка.</p>
+      </div>
+      <div class="fcard">
+        <div class="fh">Тебе это не подойдёт, если</div>
+        <p>Нужен один готовый промпт под одну разовую задачу. Здесь — метод, из которого ты собираешь любой промпт. Ради единственного случая это избыточно.</p>
+      </div>
+      <div class="fcard">
+        <div class="fh">Лучше выбери другое, если</div>
+        <p>Хочешь, чтобы промпт собрали за тебя, без изучения метода. Тогда твой вариант — <a href="app.html">PROMPT MASTER APP</a>: описываешь задачу словами, приложение собирает промпт само.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -166,31 +377,33 @@
       <h2>Что стоит знать до&nbsp;старта.</h2>
     </div>
     <div class="faq rv">
-      <details open><summary>Чем метод отличается от готовых промптов?<span class="pm"></span></summary><div class="ans">Готовый промпт решает одну задачу. Метод MASTER даёт принцип, по которому ты собираешь запрос под любую задачу сам. Изучаешь один раз — работаешь с любой моделью и любой темой без поиска «промптов для своей профессии».</div></details>
-      <details><summary>С какими нейросетями это работает?<span class="pm"></span></summary><div class="ans">Метод универсален и не привязан к одной модели: одинаково собирает запрос для разных нейросетей — текущих и будущих. Меняются модели — метод остаётся. Протокол настроен так, чтобы шесть популярных нейросетей отвечали по делу с первой попытки.</div></details>
-      <details><summary>С чего начать, если я новичок?<span class="pm"></span></summary><div class="ans">С Протокола за $14. За пять минут видно, что даёт инженерный подход: модель начинает отвечать точнее, без пустословия и лишних правок. Дальше можно перейти на PRO или MASTER, где метод разобран целиком.</div></details>
-      <details><summary>Как быстро открывается доступ?<span class="pm"></span></summary><div class="ans">Мгновенно после оплаты и навсегда — без подписок и продлений. Оплата любой картой в USD, EUR или RUB, работает из любой точки мира без VPN. Поддержка и обновления — в боте @protmaster_bot.</div></details>
-      <details><summary>Что такое «подарок каждому 50-му»?<span class="pm"></span></summary><div class="ans">Каждый 50-й покупатель любого тарифа получает следующий уровень целиком и бесплатно: купил Протокол — открываем APP, купил APP — PRO, купил PRO — MASTER. Следить за счётчиком не нужно: если ты юбилейный, доступ откроют сами.</div></details>
+      <details open><summary>Чем метод отличается от готовых промптов?<span class="pm"></span></summary><div class="ans">Готовый промпт решает одну задачу. Метод MASTER даёт принцип, по которому ты собираешь запрос под любую задачу сам. Изучаешь один раз — работаешь с любой моделью и темой, без поиска «промптов для профессии».</div></details>
+      <details><summary>С какими нейросетями это работает?<span class="pm"></span></summary><div class="ans">Метод универсален и не привязан к одной модели: одинаково собирает запрос для Claude, ChatGPT, Gemini, Grok, DeepSeek и будущих. Меняются модели — метод остаётся.</div></details>
+      <details><summary>Нужно ли уметь программировать?<span class="pm"></span></summary><div class="ans">Нет. Описываешь задачу словами — метод и приложение собирают результат. Код и термины знать не нужно.</div></details>
+      <details><summary>С чего начать, если я новичок?<span class="pm"></span></summary><div class="ans">С Протокола за $14. За пять минут видно, что даёт инженерный подход: модель отвечает точнее, без лишних правок. Дальше можно перейти на PRO или MASTER, где метод разобран целиком.</div></details>
+      <details><summary>Как быстро открывается доступ?<span class="pm"></span></summary><div class="ans">Мгновенно после оплаты и навсегда — без подписок. Любая карта в USD, EUR или RUB, из любой точки мира без VPN. Поддержка и обновления — в боте @protmaster_bot.</div></details>
+      <details><summary>Что такое «подарок каждому 50-му»?<span class="pm"></span></summary><div class="ans">Каждый 50-й покупатель любого тарифа получает следующий уровень целиком и бесплатно: купил Протокол — открываем APP, купил APP — PRO, купил PRO — MASTER. Следить за счётчиком не нужно.</div></details>
     </div>
   </div>
 </section>
 
-<!-- ВОЗВРАТ В ЭКОСИСТЕМУ -->
+<!-- ФИНАЛЬНЫЙ CTA -->
 <section class="sec dark">
   <div class="wrap">
     <div class="rv" style="max-width:680px">
       <span class="eyebrow">Следующий шаг</span>
-      <h2>PROMPT MASTER — это фундамент. Дальше система&nbsp;растёт.</h2>
-      <p class="lead">Освоил метод — усиль его готовыми инструментами и агентами под свою задачу.</p>
+      <h2>Начни с Протокола за&nbsp;$14.</h2>
+      <p class="lead">За пять минут увидишь разницу между «спросить» и «управлять». Дальше — PRO или MASTER, когда захочешь метод целиком.</p>
     </div>
     <div class="backmap rv"><div class="row">
+      <a href="https://pu.arsysai.com/" target="_blank" rel="noopener" class="btn btn-primary">Начать с Протокола — $14</a>
+      <a href="#tiers" class="btn btn-ghost">Сравнить тарифы</a>
+    </div></div>
+    <div class="backmap" style="margin-top:36px"><div class="row">
       <a href="app.html" class="chip">PROMPT MASTER APP →</a>
       <a href="agents.html" class="chip">AI AGENTS →</a>
       <a href="https://audit.arsysai.com/" target="_blank" rel="noopener" class="chip">АУДИТ →</a>
       <a href="index.html#how" class="chip">Вся экосистема →</a>
-    </div></div>
-    <div class="backmap" style="margin-top:40px"><div class="row">
-      <a href="https://pu.arsysai.com/" target="_blank" rel="noopener" class="btn btn-primary">Начать с Протокола — $14</a>
     </div></div>
   </div>
 </section>
@@ -219,7 +432,7 @@
         <ul>
           <li><a href="https://t.me/arsysai_bot" target="_blank" rel="noopener">@arsysai_bot — вход в систему</a></li>
           <li><a href="https://t.me/protmaster_bot" target="_blank" rel="noopener">@protmaster_bot — тарифы</a></li>
-          <li><a href="https://pu.arsysai.com/" target="_blank" rel="noopener">pu.arsysai.com — Протокол</a></li>
+          <li><a href="index.html">Главная</a></li>
         </ul>
       </div>
     </div>
