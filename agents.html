@@ -7,7 +7,7 @@
 <meta name="description" content="AI AGENTS — собираю клиенту целую AI-команду под его бизнес: карта департаментов и готовый промпт на каждого агента. Приходишь с идеей — уходишь с арсеналом.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,34 +15,45 @@
 <!-- NAV -->
 <header class="nav on-dark" id="nav">
   <div class="wrap nav-in">
-    <a href="index.html" class="brand"><span class="dot"></span>Architect Systems AI</a>
-    <nav class="nav-links">
-      <a href="index.html#how">Экосистема</a>
-      <a href="#what">Что это</a>
-      <a href="#how">Как работает</a>
-      <a href="#tiers">Формат</a>
-      <a href="#faq">Вопросы</a>
-    </nav>
-    <a href="https://t.me/arsysai_bot" target="_blank" rel="noopener" class="btn btn-primary nav-cta">Обсудить задачу</a>
+    <a href="index.html" class="brand"><svg class="hex" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/><path d="M12 7v5l4 2.3M12 12 8 14.3" stroke-width="1.2"/></svg><span>Architect Systems <span class="ai">AI</span></span></a>
+    <nav class="nav-links"><a href="index.html">Главная</a><a href="projects.html">Проекты</a></nav>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="dark p-hero">
-  <div class="hero-glow"></div>
-  <div class="wrap rv">
-    <div class="crumb"><a href="index.html" class="on-dark-c">Экосистема</a> <span>/</span> <span style="color:#fff">AI AGENTS</span></div>
-    <div class="kicker">Команда <span class="sep">·</span> Работает везде</div>
-    <h1>Команда AI-агентов под твой&nbsp;<em>бизнес</em>.</h1>
-    <p class="lead">Собираю клиенту целую AI-команду под его дело: карта департаментов и на каждого агента — готовый промпт. Приходишь с бизнес-идеей — уходишь с готовым арсеналом. Собирается индивидуально под нишу.</p>
+<!-- ЕДИНЫЙ ХИРО ХАБА (одинаков на всех, меняется только название) -->
+<section class="hero">
+  <canvas id="net"></canvas>
+  <div class="hero-veil"></div>
+  <div class="hero-in"><div class="wrap rv">
+    <img class="logo-img" src="logo.png" alt="Architect Systems AI">
+    <div class="hero-left">
+      <h1 class="postline">AI <span class="gr">AGENTS</span></h1>
+      <p class="lead">Команда AI-агентов под твой <em>бизнес</em>. Карта департаментов и на каждого агента — готовый промпт. Приходишь с бизнес-идеей — уходишь с готовым арсеналом под твою нишу.</p>
+    </div>
+  </div></div>
+</section>
 
-    <div class="offer">
+<!-- ЛЕНТА ВСЕЙ СИСТЕМЫ -->
+<div class="sysbar"><div class="wrap">
+  <a href="index.html">Главная</a>
+  <a href="prompt-master.html">PROMPT MASTER</a>
+  <a href="https://app.arsysai.com/" target="_blank" rel="noopener">APP</a>
+  <a href="agents.html" class="cur">AI AGENTS</a>
+  <a href="assistant.html">ASSISTANT</a>
+  <a href="https://voronka-kontent.vercel.app/" target="_blank" rel="noopener">CONTENT FUNNEL</a>
+  <a href="https://audit.arsysai.com/" target="_blank" rel="noopener">АУДИТ</a>
+  <a href="biblioteka.html">Библиотека</a>
+</div></div>
+
+<!-- ОФФЕР + CTA -->
+<section class="sec dark" style="padding-top:36px">
+  <div class="wrap">
+    <div class="offer rv">
       <div class="o"><div class="lbl">Карта</div><p>Наглядная схема департаментов: кто за что отвечает и как связан с остальными.</p></div>
       <div class="o"><div class="lbl">Промпты</div><p>На каждого агента — готовый промпт: роль, метод, параметры уже собраны.</p></div>
       <div class="o"><div class="lbl">Арсенал</div><p>Готовый рабочий набор: открываешь и запускаешь агентов под свои задачи.</p></div>
     </div>
-
-    <div class="backmap"><div class="row">
+    <div class="backmap rv" style="margin-top:22px"><div class="row">
       <a href="https://t.me/arsysai_bot" target="_blank" rel="noopener" class="btn btn-primary">Собрать AI-команду</a>
       <a href="#how" class="btn btn-ghost">Как это работает</a>
     </div></div>
@@ -219,35 +230,28 @@
 
 <!-- FOOTER -->
 <footer class="foot">
+  <div class="foot-accent"></div>
   <div class="wrap">
-    <div class="foot-top">
-      <div>
-        <div class="brand"><span class="dot"></span>Architect Systems AI</div>
-        <p>Единая система управления искусственным интеллектом: метод, инструменты, приложения и агенты. Фундамент — PROMPT MASTER.</p>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-mark"><svg class="hex" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 20 7v10l-8 4.5L4 17V7z"/></svg><span>Architect Systems <span class="ai">AI</span></span></div>
+        <p class="foot-pos">Системы управления искусственным интеллектом.</p>
+        <div class="foot-divider"></div>
+        <p class="foot-desc">Проектирую и собираю AI-системы, агентов и приложения под бизнес и сложные задачи. Один человек, с нуля.</p>
+        <div class="foot-social">
+          <a href="https://t.me/arsysai" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.8 15.6 9.6 19c.4 0 .6-.2.8-.4l2-1.9 4.1 3c.8.4 1.3.2 1.5-.7l2.7-12.8c.2-1-.4-1.4-1.1-1.1L2.5 9.6c-1 .4-1 .9-.2 1.2l4.5 1.4L17.2 6.5c.5-.3.9-.1.6.2L9.8 15.6z"/></svg></a>
+          <a href="https://www.instagram.com/arsysai/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://tiktok.com/@arsysai" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.1 1.5 3.5 3.4 3.7v2.5c-1.3.1-2.4-.3-3.4-1v6.2c0 3.3-2.7 5.6-5.7 5.1-2.6-.4-4.4-2.9-4-5.6.4-2.4 2.6-4.1 5-3.9v2.6c-.4-.1-.9-.1-1.3 0-1 .3-1.6 1.2-1.4 2.2.2 1 1.2 1.7 2.2 1.5 1-.2 1.6-1 1.6-2V3h1.6z"/></svg></a>
+          <a href="https://www.youtube.com/@ArchitectSystemsAI" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 8.2s-.2-1.5-.8-2.1c-.8-.8-1.6-.8-2-.9C16.4 5 12 5 12 5s-4.4 0-7.2.2c-.4.1-1.2.1-2 .9C2.2 6.7 2 8.2 2 8.2S1.8 10 1.8 11.7v.6c0 1.7.2 3.5.2 3.5s.2 1.5.8 2.1c.8.8 1.8.8 2.3.9 1.7.2 7 .2 7 .2s4.4 0 7.2-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2.1.8-2.1s.2-1.8.2-3.5v-.6c0-1.7-.2-3.5-.2-3.5zM10 15V9l5.2 3-5.2 3z"/></svg></a>
+        </div>
       </div>
-      <div>
-        <h5>Системы</h5>
-        <ul>
-          <li><a href="prompt-master.html">PROMPT MASTER</a></li>
-          <li><a href="app.html">PROMPT MASTER APP</a></li>
-          <li><a href="agents.html">AI AGENTS</a></li>
-          <li><a href="https://voronka-kontent.vercel.app/" target="_blank" rel="noopener">CONTENT FUNNEL</a></li>
-          <li><a href="assistant.html">ASSISTANT</a></li>
-          <li><a href="https://audit.arsysai.com/" target="_blank" rel="noopener">АУДИТ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5>Контакты</h5>
-        <ul>
-          <li><a href="https://t.me/arsysai_bot" target="_blank" rel="noopener">@arsysai_bot — вход в систему</a></li>
-          <li><a href="https://t.me/protmaster_bot" target="_blank" rel="noopener">@protmaster_bot — тарифы</a></li>
-          <li><a href="index.html">Главная</a></li>
-        </ul>
-      </div>
+      <div class="foot-col"><h5>Направления</h5><ul><li><a href="projects.html">AI AGENTS</a></li><li><a href="projects.html">AI-приложения</a></li><li><a href="projects.html">AI-автоматизация</a></li><li><a href="projects.html">Проекты</a></li><li><a href="biblioteka.html">Библиотека</a></li></ul></div>
+      <div class="foot-col"><h5>Система</h5><ul><li><a href="index.html#now">Что происходит</a></li><li><a href="index.html#what">О направлении</a></li><li><a href="index.html#how">Как устроено</a></li><li><a href="index.html#why">Новости</a></li></ul></div>
+      <div class="foot-col foot-sub"><h5>Оставайся в курсе</h5><p class="foot-desc">Примеры, материалы и кодовые слова на бесплатное — в Instagram.</p><a href="https://www.instagram.com/arsysai/" target="_blank" rel="noopener" class="btn btn-green">Смотреть в Instagram</a></div>
     </div>
     <div class="foot-bot">
       <span>© 2026 Architect Systems AI · arsysai.com</span>
-      <span>Метод · Инструменты · Приложения · Агенты</span>
+      <span class="foot-legal"><a href="https://legal.arsysai.com/" target="_blank" rel="noopener">Политика конфиденциальности</a><a href="https://legal.arsysai.com/" target="_blank" rel="noopener">Условия использования</a><a href="https://legal.arsysai.com/" target="_blank" rel="noopener">Оферта</a></span>
     </div>
   </div>
 </footer>
@@ -257,8 +261,9 @@
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
   const nav=document.getElementById('nav');
   const io2=new IntersectionObserver((es)=>{es.forEach(e=>{nav.classList.toggle('on-dark',e.isIntersecting)})},{rootMargin:'-70px 0px 0px 0px',threshold:0});
-  io2.observe(document.querySelector('.p-hero'));
+  io2.observe(document.querySelector('.hero'));
 </script>
 
+<script src="hub.js"></script>
 </body>
 </html>
